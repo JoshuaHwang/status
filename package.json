@@ -1,0 +1,35 @@
+{
+  "name": "status",
+  "version": "1.0.0",
+  "description": "A website for hospitals to organize their patient profiles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaHwang/status.git"
+  },
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "Joshua Hwang <joshchwang@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshuaHwang/status/issues"
+  },
+  "homepage": "https://github.com/JoshuaHwang/status#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "gulp": "^3.9.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-sass": "^2.2.0",
+    "mongoose": "^4.4.3",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  }
+}

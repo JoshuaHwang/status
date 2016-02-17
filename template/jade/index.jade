@@ -1,18 +1,9 @@
-doctype html
-html(lang="en-us")
-  head
-    title Status
-    //- META
-    meta(http-equiv="X-US-Compatible" content="IE=Edge")
-    meta(charset="UTF-8")
-    //- JQUERY
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js")
-    //- FOUNDATION
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.2/foundation.min.js")
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.2/foundation.min.css")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
-    //- FONTS
-    link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css")
-    //- CSS
-    link(rel="stylesheet" href="public/css/default.css")
-  body
+extends base
+
+block vars
+  - var title = 'Home'
+  - var css   = 'public/css/default.css'
+
+block body
+  h1 Hello world!
+  p Welcome to the home page! Please <a href="/login">login</a> or <a href="/register">Register</a> to continue.

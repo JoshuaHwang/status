@@ -10,6 +10,7 @@ block body
       div.medium-8
         h1 Register with us
         form(class="form" method="POST")
+          input(type="hidden" name="_csrf" value=csrfToken)
           input(type="text" name="firstName" placeholder="First name" require=true)
           input(type="text" name="lastName" placeholder="Last name" require=true)
           input(type="text" name="medId" placeholder="Medical ID" require=true)

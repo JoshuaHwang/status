@@ -7,6 +7,7 @@ block vars
 block body
   h1 Login here!
   form(class="form" method="POST")
+    input(type="hidden" name="_csrf" value=csrfToken)
     input(type="text" name="medId" placeholder="Medical ID" require=true)
     input(type="email" name="email" placeholder="Email" require=true)
     input(type="password" name="password" placeholder="Password" require=true)

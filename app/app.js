@@ -2,6 +2,7 @@ var express    = require('express');
 var app        = express();
 var path       = require('path');
 var bcrypt     = require('bcryptjs');
+var csrf       = require('csurf');
 var bodyParser = require('body-parser');
 var mongoose   = require('mongoose');
 var sessions   = require('client-sessions');
@@ -30,8 +31,13 @@ app.use(sessions({
   cookieName:     'session',
   secret:         'fhasd234fsebv267823r23',
   duration:       30 * 60 * 1000,
-  activeDuration: 5 * 60 * 1000
+  activeDuration: 5 * 60 * 1000,
+  httpOnly:       true, // Don't let browser js access cookies
+  secure:         true, // Only use cookies over https
+  ephemeral:      true // Delete cookie when browser closes
 }));
+
+app.use(csrf());
 
 // Session 
 app.use(function(req, res, next) {
@@ -67,7 +73,7 @@ app.get('/', function(req, res) {
 
 // Registration
 app.get('/register', function(req, res) {
-  res.render('../template/jade/register.jade');
+  res.render('../template/jade/register.jade', { csrfToken: req.csrfToken() });
 });
 
 app.post('/register', function(req, res) {
@@ -96,7 +102,7 @@ app.post('/register', function(req, res) {
 
 // Login
 app.get('/login', function(req, res) {
-  res.render('../template/jade/login.jade');
+  res.render('../template/jade/login.jade', { csrfToken: req.csrfToken() });
 });
 
 app.post('/login', function(req, res) {

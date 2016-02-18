@@ -5,5 +5,9 @@ block vars
   - var css   = 'public/css/default.css'
 
 block body
-  h1 Hello world!
-  p Welcome to the home page! Please <a href="/login">login</a> or <a href="/register">Register</a> to continue.
+  div.container
+    div.row
+      div.medium-8.medium-offset-1
+        h1.home Homepage
+        a(href="/login") Log in
+        a(href="/register") Register

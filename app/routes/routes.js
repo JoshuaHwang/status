@@ -50,9 +50,6 @@ module.exports = function(app) {
     }
   }
 
-  app.use(express.static('public'));
-  app.use('/public', express.static(path.join(__dirname, 'public')));
-
   //-- Routes
   app.get('/', function(req, res) {
     res.render('../template/jade/index.jade');
@@ -101,7 +98,7 @@ module.exports = function(app) {
         if (bcrypt.compareSync(req.body.password, user.password) && req.body.medId === user.medId) {
           req.session.user = user;
           res.redirect('/dashboard');
-          console.log('User has logged in!');
+          console.log(user.email + ' has logged in!');
         } else {
           res.render('../template/jade/login.jade', { error: 'Invalid email or password.' });
           console.log('Invalid email or password.');
@@ -117,5 +114,6 @@ module.exports = function(app) {
   app.get('/logout', function(req, res) {
     req.session.reset(); // Reset the session
     res.redirect('/');
+    console.log(req.user.email + ' has logged out!');
   });
 };

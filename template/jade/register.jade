@@ -8,18 +8,28 @@ block body
   div.container.sign-container
     div.row
       div.medium-10.medium-offset-1
-        div.form
-          form(class="form" method="POST")
-            h1 Register with us
-            form(class="form" method="POST")
+        div.form-register
+          form(method="POST")
+            h1.register REGISTER
+            form(method="POST")
               input(type="hidden" name="_csrf" value=csrfToken)
-              input(type="text" name="firstName" placeholder="First name" require=true)
-              input(type="text" name="lastName" placeholder="Last name" require=true)
-              input(type="text" name="medId" placeholder="Medical ID" require=true)
-              input(type="email" name="email" placeholder="Email" require=true)
-              input(type="password" name="password" placeholder="Password" require=true)
-              input(type="submit")
+              div.input-block
+                img(src="public/images/icons/user.png" alt="User Icon" class="icon-img")
+                input(type="text" name="firstName" placeholder="First name" require=true class="input")
+              div.input-block
+                img(src="public/images/icons/user.png" alt="User Icon" class="icon-img")
+                input(type="text" name="lastName" placeholder="Last name" require=true class="input")
+              div.input-block
+                img(src="public/images/icons/medId.png" alt="Medical ID Icon" class="icon-img")
+                input(type="text" name="medId" placeholder="Medical ID" require=true class="input")
+              div.input-block
+                img(src="public/images/icons/user.png" alt="User Icon" class="icon-img")
+                input(type="email" name="email" placeholder="Email" require=true class="input")
+              div.input-block
+                img(src="public/images/icons/password.png" alt="Password Icon" class="icon-img")
+                input(type="password" name="password" placeholder="Password" require=true class="input")
+              button(type="submit" class="button") REGISTER
       div.medium-10.medium-offset-1
         div.account-block
           div.account
-            p.no-account Have an account? #[a(href="/register" class="go-sign") Sign in]
+            p.no-account Have an account? #[a(href="/login" class="go-sign") Sign in]

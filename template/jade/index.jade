@@ -5,9 +5,48 @@ block vars
   - var css   = 'public/css/default.css'
 
 block body
-  div.container
+  div.container.fold-container
     div.row
-      div.medium-8.medium-offset-1
-        h1.home Homepage
-        a(href="/login") Log in
-        a(href="/register") Register
+      div.medium-12
+        span.plus +
+        h1.home Status
+    div.row.about-row
+      div.medium-8.medium-offset-2
+        h2.about View your patient's profiles.
+    div.row.links-row
+      div.medium-6.medium-offset-3
+        div.login
+          a(href="/login" class="links login-link") LOGIN
+        div.register
+          a(href="/register" class="links register-link") REGISTER
+    div.row.caret-row
+      div.medium-6.medium-offset-3
+        div.caret
+          a(href="#")
+            img(src="public/images/caret.png" id="caret")
+  div.container.tech-container
+    div.row.tech-row
+      div.medium-12
+        div.tech-block
+          img(src="public/images/tech/mongo.png" alt="mongo logo" class="tech-logos")
+          img(src="public/images/tech/express.png" alt="express logo" class="tech-logos margin-one hide-for-small-only")
+          img(src="public/images/tech/ember.png" alt="ember logo" class="tech-logos")
+          img(src="public/images/tech/node.png" alt="node logo" class="tech-logos margin-two")
+          img(src="public/images/tech/sass.png" alt="sass logo" class="tech-logos")
+          img(src="public/images/tech/jade.png" alt="jade logo" class="tech-logos margin-two")
+          img(src="public/images/tech/gulp.png" alt="gulp logo" class="tech-logos hide-for-small-only")
+  div.container.info-container
+    div.row.title-row
+      div.medium-10.medium-offset-1
+        h3#info-title What #[span.info Status] is all about
+    div.row.about-row
+      div.medium-5.medium-offset-1.small-12.about-blocks
+        h4.concept The Concept
+        p.concept-info Status is a website built to create easily accessible and editable patient profiles for hospitals.
+      div.medium-5.small-12.about-blocks
+        h4.author The Author
+        p.author-info This application is authored by Joshua Hwang. Visit his #[a(href="https://www.github.com/joshuahwang") Github] or his #[a(href="https://www.linkedin.com/in/joshua-hwang-5a6384ba") LinkedIn] here.
+  footer.footer
+    row.footer-row
+      div.medium-10.medium-offset-1
+  script(src="public/js/all.js")

@@ -1,7 +1,9 @@
 //-- COLORS
 $red:       #F35D66;
 $blue:      #5DDBDF;
-$green:     #FDF9FD;
+$navy:      #273647;
+$lightNavy: #2F4358;
+$green:     #3ADB76;
 $black:     #020202;
 $white:     #FDF9FD;
 $gray:      #D6D0D2;
@@ -10,8 +12,10 @@ $darkGray:  #AD9FA3;
 
 //-- FONTS
 // Size
+$bigHeader: 45px;
 $header:    36px;
 $subHeader: 30px;
+$title:     25px;
 $label:     20px;
 $paragraph: 14px;
 
@@ -19,8 +23,9 @@ $paragraph: 14px;
 $skinny: 100;
 $thin:   200;
 $normal: 300;
-$thick:  400;
-$fat:    500;
+$chubby: 400;
+$thick:  500;
+$fat:    700;
 
 // Spacing
 $one: 1px;

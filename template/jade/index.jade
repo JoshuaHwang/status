@@ -12,7 +12,8 @@ block body
         h1.home Status
     div.row.about-row
       div.medium-8.medium-offset-2
-        h2.about View your patient's profiles.
+        h2.about Welcome!
+        p.about-us Visit your patient's profiles with Status, the platform used by doctors around the world.
     div.row.links-row
       div.medium-6.medium-offset-3
         div.login
@@ -33,7 +34,7 @@ block body
           img(src="public/images/tech/ember.png" alt="ember logo" class="tech-logos")
           img(src="public/images/tech/node.png" alt="node logo" class="tech-logos margin-two")
           img(src="public/images/tech/sass.png" alt="sass logo" class="tech-logos")
-          img(src="public/images/tech/jade.png" alt="jade logo" class="tech-logos margin-two")
+          img(src="public/images/tech/jade.png" alt="jade logo" class="tech-logos margin-two hide-for-small-only")
           img(src="public/images/tech/gulp.png" alt="gulp logo" class="tech-logos hide-for-small-only")
   div.container.info-container
     div.row.title-row
@@ -45,8 +46,13 @@ block body
         p.concept-info Status is a website built to create easily accessible and editable patient profiles for hospitals.
       div.medium-5.small-12.about-blocks
         h4.author The Author
-        p.author-info This application is authored by Joshua Hwang. Visit his #[a(href="https://www.github.com/joshuahwang") Github] or his #[a(href="https://www.linkedin.com/in/joshua-hwang-5a6384ba") LinkedIn] here.
-  footer.footer
-    row.footer-row
-      div.medium-10.medium-offset-1
+        p.author-info This application is authored by Joshua Hwang. Feel free to view his progress on #[a(href="https://www.github.com/joshuahwang") Github].
+  footer.container.footer
+    div.row.footer-row
+      div.medium-12
+        h5.connect Connect with the author: 
+        a(href="https://www.linkedin.com/in/joshua-hwang-5a6384ba")
+          img(src="public/images/tech/linkedin.png" alt="linkedin logo" class="connect-icons")
+        a(href="https://www.github.com/joshuahwang")
+          img(src="public/images/tech/github.png" alt="github logo" class="connect-icons")
   script(src="public/js/all.js")

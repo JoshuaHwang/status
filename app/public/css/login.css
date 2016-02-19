@@ -3,3 +3,130 @@ html, body {
   height: 100%;
   margin: 0px;
   padding: 0px; }
+
+body {
+  background-color: #F4F4F4; }
+
+.sign-container {
+  margin-top: 100px; }
+  .sign-container .form-sign {
+    background-color: #FDF9FD;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #FDF9FD;
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(145, 145, 145, 0.5);
+    -moz-box-shadow: 1px 1px 3px 1px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 1px 3px 1px rgba(145, 145, 145, 0.5);
+    margin-right: auto;
+    margin-left: auto; }
+    .sign-container .form-sign .sign {
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px; }
+    .sign-container .form-sign .input-block {
+      position: relative;
+      padding: 0;
+      margin: 0; }
+    .sign-container .form-sign .input {
+      width: 85%;
+      padding-left: 40px;
+      margin-right: auto;
+      margin-left: auto; }
+    .sign-container .form-sign .icon-img {
+      position: absolute;
+      left: 30px;
+      bottom: 8px; }
+    .sign-container .form-sign .input[type=text],
+    .sign-container .form-sign .input[type=email],
+    .sign-container .form-sign .input[type=password] {
+      font-size: 14px; }
+    .sign-container .form-sign .button {
+      background-color: #F35D66;
+      display: block;
+      width: 85%;
+      height: 40px;
+      margin-right: auto;
+      margin-left: auto; }
+    .sign-container .form-sign .button:hover {
+      background-color: #3ADB76;
+      transition: all 0.3s ease; }
+    .sign-container .form-sign .account {
+      text-align: center;
+      margin-top: 15px;
+      padding-top: 20px;
+      padding-bottom: 20px; }
+      .sign-container .form-sign .account .go-register {
+        font-size: 16px;
+        font-weight: 400; }
+  .sign-container .account-block {
+    background-color: #FDF9FD;
+    width: 300px;
+    height: 50px;
+    border: 1px solid #FDF9FD;
+    margin-top: 20px;
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(145, 145, 145, 0.5);
+    -moz-box-shadow: 1px 1px 3px 1px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 1px 3px 1px rgba(145, 145, 145, 0.5);
+    margin-right: auto;
+    margin-left: auto; }
+    .sign-container .account-block .account {
+      text-align: center;
+      margin-top: 10px; }
+      .sign-container .account-block .account .no-account {
+        color: #655D59; }
+
+.form-register {
+  background-color: #FDF9FD;
+  width: 300px;
+  height: 425px;
+  border: 1px solid #FDF9FD;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(145, 145, 145, 0.5);
+  -moz-box-shadow: 1px 1px 3px 1px rgba(145, 145, 145, 0.5);
+  box-shadow: 1px 1px 3px 1px rgba(145, 145, 145, 0.5);
+  margin-right: auto;
+  margin-left: auto; }
+  .form-register .register {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .form-register .input-block {
+    position: relative;
+    padding: 0;
+    margin: 0; }
+  .form-register .input {
+    width: 85%;
+    padding-left: 40px;
+    margin-right: auto;
+    margin-left: auto; }
+  .form-register .icon-img {
+    position: absolute;
+    left: 30px;
+    bottom: 8px; }
+  .form-register .input[type=text],
+  .form-register .input[type=email],
+  .form-register .input[type=password] {
+    font-size: 14px; }
+  .form-register .button {
+    background-color: #36B8D5;
+    display: block;
+    width: 85%;
+    height: 40px;
+    margin-right: auto;
+    margin-left: auto; }
+  .form-register .button:hover {
+    background-color: #1583CC;
+    transition: all 0.3s ease; }
+  .form-register .account {
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    .form-register .account .go-register {
+      font-size: 16px;
+      font-weight: 400; }

@@ -7,7 +7,7 @@ html, body {
 .fold-container {
   background: linear-gradient(rgba(39, 55, 64, 0.9), rgba(39, 55, 64, 0.7)), url("/public/images/background.jpg");
   background-size: cover;
-  height: 475px; }
+  height: 550px; }
   .fold-container .home {
     display: inline-block;
     color: #FDF9FD;
@@ -26,7 +26,11 @@ html, body {
     text-align: center; }
     .fold-container .about-row .about {
       color: #FDF9FD;
-      font-size: 30px;
+      font-size: 36px;
+      font-weight: 400; }
+    .fold-container .about-row .about-us {
+      color: #FDF9FD;
+      font-size: 20px;
       font-weight: 200; }
   .fold-container .links-row {
     margin-top: 30px;
@@ -38,7 +42,7 @@ html, body {
       position: relative;
       text-decoration: none;
       color: #3ADB76;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 500;
       border: 1px solid #3ADB76;
       border-radius: 4px;
@@ -56,7 +60,7 @@ html, body {
       -webkit-transition: all 0.3s ease; }
   .fold-container .caret-row {
     text-align: center;
-    margin-top: 175px; }
+    margin-top: 160px; }
 
 .tech-container {
   background-color: #F4F4F4;
@@ -88,7 +92,8 @@ html, body {
     .info-container .title-row #info-title {
       text-align: center; }
     .info-container .title-row .info {
-      color: #F35D66; }
+      color: #F35D66;
+      font-weight: 500; }
   .info-container .about-row {
     margin-top: 30px; }
     .info-container .about-row .about-blocks {
@@ -96,12 +101,25 @@ html, body {
       margin-bottom: 30px; }
     .info-container .about-row .concept,
     .info-container .about-row .author {
+      font-weight: 200;
       text-align: center; }
     .info-container .about-row .concept-info,
     .info-container .about-row .author-info {
+      color: #655D59;
       margin: auto;
       width: 300px; }
 
 .footer {
   background-color: #F4F4F4;
-  height: 60px; }
+  height: 60px;
+  text-align: right; }
+  .footer .connect {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 5px;
+    margin-top: 20px; }
+  .footer .connect-icons {
+    margin-left: 10px; }
+  .footer .connect,
+  .footer .connect-icons {
+    display: inline-block; }

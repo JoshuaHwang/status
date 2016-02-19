@@ -1,7 +1,113 @@
 // GLOBAL VARIABLES
 @import 'base';
 
-//-- LOGIN 
+//-- LOCAL VARIABLES
+// Background
+@mixin backgroundColor {
+  background: #757F9A; 
+  background: -webkit-linear-gradient(to left, #7474BF, #348AC7); 
+  background: linear-gradient(to left, #7474BF, #348AC7); 
+}
 
+// Box Shadow 
+@mixin boxShadow {
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(145, 145, 145, 0.5);
+  -moz-box-shadow: 1px 1px 3px 1px rgba(145, 145, 145, 0.5);
+  box-shadow: 1px 1px 3px 1px rgba(145, 145, 145, 0.5);
+}
+
+//-- LOGIN 
+body {
+  background-color: $lightGray;
+}
+
+.sign-container {
+  margin-top: $fifty;
+
+  .form {
+    background-color: $white;
+    width: 300px;
+    height: 300px;
+    border: 1px solid $white;
+    @include boxShadow;
+    @include auto;
+
+    .sign {
+      font-size: $paragraph;
+      font-weight: $chubby;
+      letter-spacing: $one;
+      text-align: center;
+      margin: {
+        top: $twenty;
+        bottom: $twenty;
+      }
+    }
+
+    .input-block {
+      position: relative;
+      padding: 0;
+      margin: 0;
+    }
+
+    .input {
+      width: 85%;
+      padding-left: 40px;
+      @include auto;
+    }
+
+    .icon-img {
+      position: absolute;
+      left: 30px;
+      bottom: 8px;
+    }
+
+    .input[type=text],
+    .input[type=email],
+    .input[type=password] {
+      font-size: $smallP;
+    }
+
+    .button {
+      background-color: $red;
+      display: block;
+      width: 85%;
+      height: 40px;
+      @include auto;
+    }
+
+    .account {
+      text-align: center;
+      margin-top: $fifteen;
+      padding: {
+        top: $twenty;
+        bottom: $twenty;
+      }
+
+      .go-register {
+        font-size: $paragraph;
+        font-weight: $chubby;
+      }
+    }
+  }
+
+  .account-block {
+    background-color: $white;
+    width: 300px;
+    height: 50px;
+    border: 1px solid $white;
+    margin-top: $twenty;
+    @include boxShadow;
+    @include auto;
+
+    .account {
+      text-align: center;
+      margin-top: 10px;
+
+      .no-account {
+        color: $darkGray;
+      }
+    }
+  }
+}
 
 //-- REGISTER

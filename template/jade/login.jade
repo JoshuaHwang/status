@@ -5,12 +5,27 @@ block vars
   - var css   = 'public/css/login.css'
 
 block body
-  h1 Login here!
-  form(class="form" method="POST")
-    input(type="hidden" name="_csrf" value=csrfToken)
-    input(type="text" name="medId" placeholder="Medical ID" require=true)
-    input(type="email" name="email" placeholder="Email" require=true)
-    input(type="password" name="password" placeholder="Password" require=true)
-    input(type="submit")
+  div.container.sign-container
+    div.row
+      div.medium-10.medium-offset-1
+        div.form
+          form(class="form" method="POST")
+            h1.sign SIGN IN
+            input(type="hidden" name="_csrf" value=csrfToken)
+            div.input-block
+              img(src="public/images/icons/medId.png" alt="Medical ID Icon" class="icon-img")
+              input(type="text" name="medId" placeholder="Medical ID" require=true class="input")
+            div.input-block
+              img(src="public/images/icons/user.png" alt="User Icon" class="icon-img")
+              input(type="email" name="email" placeholder="Email" require=true class="input")
+            div.input-block
+              img(src="public/images/icons/password.png" alt="Password Icon" class="icon-img")
+              input(type="password" name="password" placeholder="Password" require=true class="input")
+            button(type="submit" class="button") SIGN IN
+      div.medium-10.medium-offset-1
+        div.account-block
+          div.account
+            p.no-account Don't have an account? #[a(href="/register" class="go-register") Register]
+
 
     

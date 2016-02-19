@@ -2,13 +2,6 @@
 @import 'base';
 
 //-- LOCAL VARIABLES
-// Background
-@mixin backgroundColor {
-  background: #485563; 
-  background: -webkit-linear-gradient(to left, #485563, #29323c);
-  background: linear-gradient(to left, #485563, #29323c);        
-}
-
 // Buttons
 @mixin buttonBefore {
   position: relative;

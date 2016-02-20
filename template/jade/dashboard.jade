@@ -17,9 +17,9 @@ block body
         img(src="public/images/icons/mail.png" alt="Mail icon" class="nav-icons")
   div.container.header-container
     div.row
-      div.medium-5.small-4.dash-block
+      div.medium-5.small-4.column.dash-block
         h2.dashboard DASHBOARD
-      div.medium-6.small-7.log-block
+      div.medium-6.small-7.column.log-block
         a(href="/logout" class="logout") LOGOUT
   div.container.top-container
     div.row
@@ -29,7 +29,10 @@ block body
         //- div.profile-name
         //-   p.first-name Merideth
         //-   p.last-name Grey
-      //- div.medium-3.column.time-block
-      //-   div.time
-      //-     h3.current-time 10:39PM
-      div.medium-5
+      div.medium-3.column.time-block
+        div.time
+          h3#current-time 
+          p#meridies
+          h3#current-date
+      div.medium-5.column.timeline-block
+  script(src="public/js/all.js")

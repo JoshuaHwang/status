@@ -110,7 +110,29 @@ hr {
   }
 
   .time-block {
-    display: inline-block;
+    text-align: center;
+
+    #current-time,
+    #meridies {
+      display: inline-block;
+    }
+
+    #current-time {
+      font-size: $clock;
+      font-weight: $skinny;
+    }
+
+    #meridies {
+      font-weight: $thin;
+    }
+
+    #current-date {
+      color: $darkGray;
+      font-size: $paragraph;
+      font-weight: $thin;
+      letter-spacing: $one;
+      margin-top: -20px;
+    }
   }
 }
 

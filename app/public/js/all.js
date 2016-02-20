@@ -7,7 +7,7 @@ function discover() {
   }, 1000);
 }
 
-//-- SHOW TIME
+//-- CLOCK
 var monthNames = [
   'January',
   'February',
@@ -33,31 +33,47 @@ var dayNames = [
   'Sat'
 ];
 
-var today = new Date();
-var month = monthNames[today.getMonth()];
-var day   = dayNames[today.getDay()];
-var date  = today.getDate();
-var hour  = today.getHours();
-var min   = today.getMinutes();
-
-if(min < 10) {
-  min = '0' + min;
-}
-
-if(hour > 12) {
-  hour = hour - 12;
-}
-
-var meridies = document.getElementById('meridies');
-
-if(hour >= 12) {
-  meridies.innerHTML = 'AM';
-} else if(hour <= 12) {
-  meridies.innerHTML = 'PM';
-}
-
 var currentDate = document.getElementById('current-date');
 var currentTime = document.getElementById('current-time');
 
-currentDate.innerHTML = day + ', ' + month + ' ' + date; 
-currentTime.innerHTML = hour + ':' + min;
+var meridies = document.getElementById('meridies');
+
+function formatMin(m) {
+  if(m < 10) {
+    m = '0' + m;
+  }
+
+  return m;
+}
+
+function formatHour(h) {
+  if(h > 12) {
+    h = h - 12;
+  }
+
+  return h;
+}
+
+function startTime() {
+  var today = new Date();
+  var month = monthNames[today.getMonth()];
+  var day   = dayNames[today.getDay()];
+  var date  = today.getDate();
+  var hour  = formatHour(today.getHours());
+  var min   = formatMin(today.getMinutes());
+
+  if(hour >= 12) {
+    meridies.innerHTML = 'AM';
+  } else if(hour <= 12) {
+    meridies.innerHTML = 'PM';
+  }
+
+  currentDate.innerHTML = day + ', ' + month + ' ' + date; 
+  currentTime.innerHTML = hour + ':' + min;
+
+  var timeout = setTimeout(function() {
+    startTime()
+  }, 500);
+}
+
+startTime();

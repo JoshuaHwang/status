@@ -5,5 +5,31 @@ block vars
   - var css   = 'public/css/dashboard.css'
 
 block body
-  h1 Welcome doctor you are now logged in!
-  a(href="/logout") Logout
+  div.nav-container
+  div.vertical-nav
+    nav.nav
+      h1.s S
+      a(href="#") 
+        img(src="public/images/icons/dashboard.png" alt="dashboard icon" class="nav-icons")
+      a(href="#") 
+        img(src="public/images/icons/patients.png" alt="Patients icon" class="nav-icons")
+      a(href="#") 
+        img(src="public/images/icons/mail.png" alt="Mail icon" class="nav-icons")
+  div.container.header-container
+    div.row
+      div.medium-5.small-4.dash-block
+        h2.dashboard DASHBOARD
+      div.medium-6.small-7.log-block
+        a(href="/logout" class="logout") LOGOUT
+  div.container.top-container
+    div.row
+      div.medium-3.column.profile-block
+        //- div.profile-pic
+        //-   img(src="public/images/profiles/dr-grey.jpg" alt="Doctor image" class="doctor-image")
+        //- div.profile-name
+        //-   p.first-name Merideth
+        //-   p.last-name Grey
+      //- div.medium-3.column.time-block
+      //-   div.time
+      //-     h3.current-time 10:39PM
+      div.medium-5

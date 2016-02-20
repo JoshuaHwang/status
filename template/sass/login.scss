@@ -2,13 +2,6 @@
 @import 'base';
 
 //-- LOCAL VARIABLES
-// Background
-@mixin backgroundColor {
-  background: #757F9A; 
-  background: -webkit-linear-gradient(to left, #7474BF, #348AC7); 
-  background: linear-gradient(to left, #7474BF, #348AC7); 
-}
-
 // Box Shadow 
 @mixin boxShadow {
   -webkit-box-shadow: 1px 1px 3px 1px rgba(145, 145, 145, 0.5);

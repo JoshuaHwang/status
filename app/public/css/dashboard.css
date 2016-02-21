@@ -3,3 +3,117 @@ html, body {
   height: 100%;
   margin: 0px;
   padding: 0px; }
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 100%;
+  background: #43cea2;
+  background: -webkit-linear-gradient(to bottom, #019FE9, #30CCD6);
+  background: linear-gradient(to bottom, #019FE9, #30CCD6); }
+
+.vertical-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 90px;
+  height: 100%;
+  text-align: center; }
+  .vertical-nav .s {
+    display: inline-block;
+    color: #FDF9FD;
+    font-size: 25px;
+    font-weight: 500;
+    border: 2px solid #FDF9FD;
+    border-radius: 50%;
+    padding: 3px 13px 3px 13px;
+    margin-top: 10px;
+    margin-bottom: -10px; }
+  .vertical-nav .nav-icons {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto; }
+
+.header-container {
+  margin-top: 10px;
+  margin-left: 100px;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #D6D0D2; }
+  .header-container .dash-block {
+    display: inline-block; }
+    .header-container .dash-block .dashboard {
+      color: #655D59;
+      font-size: 20px;
+      font-weight: 200; }
+  .header-container .log-block {
+    display: inline-block;
+    font-size: 14px;
+    text-align: right; }
+
+.top-container {
+  margin-left: 90px; }
+  .top-container .profile-block {
+    margin-top: 15px;
+    text-align: center; }
+    .top-container .profile-block .doctor-profile .doctor-name {
+      color: #655D59;
+      display: inline;
+      font-weight: 400; }
+    .top-container .profile-block .doctor-profile .doctor-image {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%; }
+    .top-container .profile-block .welcome {
+      display: inline-block;
+      font-weight: 200;
+      margin-top: 10px; }
+      .top-container .profile-block .welcome .outlook {
+        color: #F35D66;
+        font-weight: normal; }
+  .top-container .time-block {
+    text-align: center; }
+    .top-container .time-block #current-time,
+    .top-container .time-block #meridies {
+      display: inline-block; }
+    .top-container .time-block #current-time {
+      font-size: 50px;
+      font-weight: 100; }
+    .top-container .time-block #meridies {
+      font-weight: 200;
+      margin-left: -2px; }
+    .top-container .time-block #current-date {
+      color: #655D59;
+      font-size: 16px;
+      font-weight: 200;
+      letter-spacing: 1px;
+      margin-top: -20px; }
+  .top-container .timeline-block .timeline-title {
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center; }
+
+.summary-container {
+  margin-left: 90px; }
+  .summary-container .summary-block {
+    text-align: center; }
+    .summary-container .summary-block .summary-label {
+      font-size: 20px;
+      font-weight: 200; }
+
+@media (min-width: 640px) {
+  .profile-block {
+    text-align: left !important; }
+  .time-block {
+    padding-top: 0px; }
+  .timeline-block {
+    position: fixed;
+    right: 0;
+    background-color: #F4F4F4;
+    height: 100%;
+    margin-top: -10px;
+    padding-top: 10px; } }

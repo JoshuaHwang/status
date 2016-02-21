@@ -17,22 +17,34 @@ block body
         img(src="public/images/icons/mail.png" alt="Mail icon" class="nav-icons")
   div.container.header-container
     div.row
-      div.medium-5.small-4.column.dash-block
+      div.medium-5.small-4.columns.dash-block
         h2.dashboard DASHBOARD
-      div.medium-6.small-7.column.log-block
+      div.medium-6.small-7.columns.log-block
         a(href="/logout" class="logout") LOGOUT
   div.container.top-container
     div.row
-      div.medium-3.column.profile-block
-        //- div.profile-pic
-        //-   img(src="public/images/profiles/dr-grey.jpg" alt="Doctor image" class="doctor-image")
-        //- div.profile-name
-        //-   p.first-name Merideth
-        //-   p.last-name Grey
-      div.medium-3.column.time-block
+      div.medium-4.columns.profile-block
+        div.doctor-profile 
+          img(src="public/images/profiles/dr-grey.jpg" alt="Dr Merideth Grey" class="doctor-image")
+          p.doctor-name Dr. Merideth Grey
+        p.welcome Welcome back, todays outlook looks #[span.outlook busy].
+      div.medium-4.columns.time-block
         div.time
           h3#current-time 
           p#meridies
+        div.date
           h3#current-date
-      div.medium-5.column.timeline-block
+      div.medium-3.columns.timeline-block
+        div.timeline
+          h3.timeline-title TIMELINE
+  div.container.summary-container
+    div.row
+      div.medium-3.columns.summary-block
+        h4.summary-label MEETINGS
+      div.medium-3.columns.summary-block
+        h4.summary-label APPOINTMENTS
+      div.medium-3.columns.end.summary-block
+        h4.summary-label LABS
+    div.row
+      div.medium-9.columns
   script(src="public/js/all.js")

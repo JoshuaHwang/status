@@ -62,11 +62,11 @@ function startTime() {
   var hour  = formatHour(today.getHours());
   var min   = formatMin(today.getMinutes());
 
-  if(hour >= 12) {
-    meridies.innerHTML = 'AM';
-  } else if(hour <= 12) {
-    meridies.innerHTML = 'PM';
-  }
+  // if(hour >= 12) {
+  //   meridies.innerHTML = 'AM';
+  // } else if(hour <= 12) {
+  //   meridies.innerHTML = 'PM';
+  // }
 
   currentDate.innerHTML = day + ', ' + month + ' ' + date; 
   currentTime.innerHTML = hour + ':' + min;

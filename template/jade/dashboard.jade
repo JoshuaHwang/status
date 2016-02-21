@@ -30,10 +30,10 @@ block body
           img(src="public/images/profiles/dr-grey.jpg" alt="Dr Merideth Grey" class="doctor-image")
           p.doctor-name Dr. Merideth Grey
         p.welcome Welcome back, todays outlook looks #[span.outlook busy].
-      div.medium-4.columns.time-block
+      div.medium-3.columns.time-block
         div.time
           h3#current-time 
-          p#meridies
+          //- p#meridies
         div.date
           h3#current-date
       div.medium-3.columns.timeline-block
@@ -51,6 +51,11 @@ block body
         canvas(id="labs-chart")
         h4.summary-label LABS
     div.row
-      div.medium-9.columns
+      //- div.medium-8.columns
+      //-   h5 NOTES
+      //-   ul
+      //-     li Ernie Johnson's condition is great and is ok to be discharged on your watch
+      //-     li Grant Hill's condition is weakening and must be moved to emergency care
+      //-     li Charles Barkley's condistion is ok and may need another prescription of vicodin
   script(src="public/js/all.js")
   script(src="public/js/chart.js")

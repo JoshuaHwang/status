@@ -11,6 +11,10 @@ var meetingData = [
   {
     value: 3,
     color: '#3ADB76'
+  },
+  {
+    value: 0,
+    color: '#E3E3E3'
   }
 ];
 
@@ -21,8 +25,12 @@ var meetingChart = new Chart(document.getElementById('meet-chart')
 // APPOINTMENTS
 var appointmentData = [
   {
-    value: 15,
+    value: 12,
     color: '#F35D66'
+  },
+  {
+    value: 3,
+    color: '#E3E3E3'
   }
 ];
 
@@ -33,8 +41,12 @@ var appointmentChart = new Chart(document.getElementById('apps-chart')
 // LABS
 var labData = [
   {
-    value: 6,
+    value: 2,
     color: '#36B8D5'
+  },
+  {
+    value: 3,
+    color: '#E3E3E3'
   }
 ];
 

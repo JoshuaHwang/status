@@ -13,7 +13,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 90px;
+  width: 70px;
   height: 100%;
   @include verticalColor;
 }
@@ -23,7 +23,7 @@
   top: 0;
   left: 0;
   display: block;
-  width: 90px;
+  width: 70px;
   height: 100%;
   text-align: center;
 
@@ -53,7 +53,7 @@
 
 .header-container {
   margin-top: $ten;
-  margin-left: 100px;
+  margin-left: 70px;
   padding-bottom: 1px;
   border-bottom: 1px solid $gray;
 
@@ -75,7 +75,7 @@
 }
 
 .top-container {
-  margin-left: 90px;
+  margin-left: 70px;
 
   .profile-block {
     margin-top: $fifteen;
@@ -146,14 +146,14 @@
 }
 
 .summary-container {
-  margin-left: 70px;
+  margin-left: 50px;
 
   .summary-block {
     text-align: center;
 
     .summary-label {
       color: $darkGray;
-      font-size: $label;
+      font-size: $paragraph;
       font-weight: $thin;
       margin-top: $ten;
     }
@@ -162,12 +162,18 @@
 
 // ----- DEVICES 760px AND UP
 @media (min-width: 640px) {
-  .profile-block {
-    text-align: left !important;
-  }
+  .top-container {
+    border-bottom: 1px solid $gray;
+    padding-bottom: $ten;
 
-  .time-block {
-    padding-top: 0px;
+    .profile-block {
+      text-align: left !important;
+      padding-top: 5px;
+    }
+
+    .time-block {
+      padding-top: 0px;
+    }
   }
 
   .timeline-block {
@@ -176,8 +182,12 @@
     background-color: $lightGray;
     height: 100%;
     // margin-top: -10px;
-    padding-top: 10px;
+    padding-top: 20px;
   } 
+
+  .summary-container {
+    margin-top: $fifty;
+  }
 
   canvas {
     height: 125px;

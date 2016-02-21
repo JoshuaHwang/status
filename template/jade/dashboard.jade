@@ -4,6 +4,8 @@ block vars
   - var title = 'Dashboard'
   - var css   = 'public/css/dashboard.css'
 
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js")
+
 block body
   div.nav-container
   div.vertical-nav
@@ -40,11 +42,15 @@ block body
   div.container.summary-container
     div.row
       div.medium-3.columns.summary-block
+        canvas(id="meet-chart")
         h4.summary-label MEETINGS
       div.medium-3.columns.summary-block
-        h4.summary-label APPOINTMENTS
+        canvas(id="apps-chart")
+        h4.summary-label APPS
       div.medium-3.columns.end.summary-block
+        canvas(id="labs-chart")
         h4.summary-label LABS
     div.row
       div.medium-9.columns
   script(src="public/js/all.js")
+  script(src="public/js/chart.js")

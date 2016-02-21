@@ -24,13 +24,13 @@ var monthNames = [
 ];
 
 var dayNames = [
-  'Sun',
-  'Mon',
-  'Tue',
-  'Wed',
-  'Thu',
-  'Fri',
-  'Sat'
+  'Sunday',
+  'Monday',
+  'Tueday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday'
 ];
 
 var currentDate = document.getElementById('current-date');

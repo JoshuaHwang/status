@@ -99,7 +99,7 @@
     .welcome {
       display: inline-block;
       font-weight: $thin;
-      margin-top: $ten;
+      padding-top: 5px;
 
       .outlook {
         color: $red;
@@ -146,14 +146,16 @@
 }
 
 .summary-container {
-  margin-left: 90px;
+  margin-left: 70px;
 
   .summary-block {
     text-align: center;
 
     .summary-label {
+      color: $darkGray;
       font-size: $label;
       font-weight: $thin;
+      margin-top: $ten;
     }
   }
 }
@@ -173,9 +175,14 @@
     right: 0;
     background-color: $lightGray;
     height: 100%;
-    margin-top: -10px;
+    // margin-top: -10px;
     padding-top: 10px;
   } 
+
+  canvas {
+    height: 125px;
+    width: 125px;
+  }
 }
 
 

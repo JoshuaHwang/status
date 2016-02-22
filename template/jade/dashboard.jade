@@ -40,7 +40,7 @@ block body
         div.timeline
           h3.timeline-title TIMELINE
   div.container.summary-container
-    div.row
+    div.row.summary-row
       div.medium-3.columns.summary-block
         canvas(id="meet-chart")
         h4.summary-label MEETINGS
@@ -51,11 +51,11 @@ block body
         canvas(id="labs-chart")
         h4.summary-label LABS
     div.row
-      //- div.medium-8.columns
-      //-   h5 NOTES
-      //-   ul
-      //-     li Ernie Johnson's condition is great and is ok to be discharged on your watch
-      //-     li Grant Hill's condition is weakening and must be moved to emergency care
-      //-     li Charles Barkley's condistion is ok and may need another prescription of vicodin
+      div.medium-8.columns.note-block
+        h5.notes NOTES
+        ul.list
+          li.bullets Ernie Johnson's condition is great and is ok to be discharged on your watch
+          li.bullets Grant Hill's condition is weakening and must be moved to emergency care
+          li.bullets Charles Barkley's condistion is ok and may need another prescription of vicodin, the pharmacy
   script(src="public/js/all.js")
   script(src="public/js/chart.js")

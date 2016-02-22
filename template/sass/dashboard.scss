@@ -146,16 +146,45 @@
 }
 
 .summary-container {
-  margin-left: 50px;
+  margin-left: $fifty;
+
+  .summary-row {
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    padding: {
+      top: $twenty;
+      bottom: $twenty;
+    }
+  }
 
   .summary-block {
     text-align: center;
+    margin-top: $thirty;
 
     .summary-label {
       color: $darkGray;
       font-size: $paragraph;
       font-weight: $thin;
       margin-top: $ten;
+    }
+  }
+
+  .note-block {
+    margin-top: $twenty;
+
+    .notes {
+      font-size: $paragraph;
+      font-weight: $thin;
+      text-align: center;
+    }
+
+    .list {
+      color: $darkGray;
+      padding-left: $forty;
+
+      .bullets {
+        margin-bottom: $ten;
+      }
     }
   }
 }
@@ -186,7 +215,18 @@
   } 
 
   .summary-container {
-    margin-top: $fifty;
+    margin-top: $forty;
+
+    .summary-row {
+      border-top: none;
+      padding: {
+        top: 0px;
+      }
+
+      .summary-block {
+        margin-top: 0px;
+      }
+    }
   }
 
   canvas {

@@ -9,231 +9,322 @@
 }
 
 //-- DASHBOARD
-.nav-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 70px;
-  height: 100%;
-  @include verticalColor;
-}
-
-.vertical-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 70px;
-  height: 100%;
-  text-align: center;
-
-  .s {
-    display: inline-block;
-    color: $white;
-    font-size: $title;
-    font-weight: $thick;
-    border: 2px solid $white;
-    border-radius: 50%;
-    padding: 3px 13px 3px 13px;
-    margin: {
-      top: $ten;
-      bottom: -10px;
-    }
-  }
-
-  .nav-icons {
-    display: block;
-    margin: {
-      top: $fifty;
-      bottom: $fifty;
-    }
-    @include auto;
-  }
-}
-
 .header-container {
-  margin-top: $ten;
-  margin-left: 70px;
-  padding-bottom: 1px;
-  border-bottom: 1px solid $gray;
+  background-color: $navy;
+  height: 125px;
+  border-bottom: 2px solid $red;
 
-  .dash-block {
-    display: inline-block;
+  .nav-block {
+    .status {
+      color: $red;
+      font-size: $subHeader;
+      display: inline-block;
+      border-bottom: 1px solid transparent;
+    }
 
-    .dashboard {
-      color: $darkGray;
-      font-size: $label;
-      font-weight: $thin;
+    .navs {
+      color: $white;
+      font-size: $tinyP;
+      font-weight: $thick;
+      letter-spacing: $one;
+      margin-left: $thirty;
+      padding-bottom: $five;
+      border-bottom: 1px solid transparent;
+    }
+
+    .logout {
+      text-align: right;
+    }
+
+    .navs:hover {
+      border-bottom: 1px solid $red;
+      transition: all 0.3s ease;
     }
   }
 
-  .log-block {
-    display: inline-block;
-    font-size: $smallP;
-    text-align: right;
-  }
-}
-
-.top-container {
-  margin-left: 70px;
-
-  .profile-block {
-    margin-top: $fifteen;
-    text-align: center;
-
-    .doctor-profile {
-
-      .doctor-name {
-        color: $darkGray;
-        display: inline;
-        font-weight: $chubby;
-      }
-
-      .doctor-image {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-      }
+  .end-block {
+    .logout {
+      color: $white;
+      font-size: $smallP;
+      font-weight: $thick;
+      letter-spacing: $one;
+      margin-left: $thirty;
+      padding-bottom: $five;
+      border-bottom: 1px solid transparent;
     }
 
+    .logout:hover {
+      border-bottom: 1px solid $red;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .welcome-block {
     .welcome {
-      display: inline-block;
-      font-weight: $thin;
-      padding-top: 5px;
-
-      .outlook {
-        color: $red;
-        font-weight: normal;
-      }
-    }
-  }
-
-  .time-block {
-    text-align: center;
-
-    #current-time,
-    #meridies {
-      display: inline-block;
-    }
-
-    #current-time {
-      font-size: $clock;
-      font-weight: $skinny;
-    }
-
-    #meridies {
-      font-weight: $thin;
-      margin-left: -2px;
-    }
-
-    #current-date {
-      color: $darkGray;
+      color: $white;
       font-size: $paragraph;
       font-weight: $thin;
       letter-spacing: $one;
-      margin-top: -20px;
-    }
-  }
+      margin-top: $twenty;
 
-  .timeline-block {
-
-    .timeline-title {
-      font-size: $label;
-      font-weight: $thin;
-      text-align: center;
-    }
-  }
-}
-
-.summary-container {
-  margin-left: $fifty;
-
-  .summary-row {
-    border-top: 1px solid $gray;
-    border-bottom: 1px solid $gray;
-    padding: {
-      top: $twenty;
-      bottom: $twenty;
-    }
-  }
-
-  .summary-block {
-    text-align: center;
-    margin-top: $thirty;
-
-    .summary-label {
-      color: $darkGray;
-      font-size: $paragraph;
-      font-weight: $thin;
-      margin-top: $ten;
-    }
-  }
-
-  .note-block {
-    margin-top: $twenty;
-
-    .notes {
-      font-size: $paragraph;
-      font-weight: $thin;
-      text-align: center;
-    }
-
-    .list {
-      color: $darkGray;
-      padding-left: $forty;
-
-      .bullets {
-        margin-bottom: $ten;
+      .doc {
+        color: $blue;
+        font-weight: $chubby;
       }
     }
   }
 }
 
-// ----- DEVICES 760px AND UP
+// ----- DEVICES 640px AND UP
 @media (min-width: 640px) {
-  .top-container {
-    border-bottom: 1px solid $gray;
-    padding-bottom: $ten;
+  .header-container {
+    height: 130px;
 
-    .profile-block {
-      text-align: left !important;
-      padding-top: 5px;
-    }
-
-    .time-block {
-      padding-top: 0px;
-    }
-  }
-
-  .timeline-block {
-    position: fixed;
-    right: 0;
-    background-color: $lightGray;
-    height: 100%;
-    // margin-top: -10px;
-    padding-top: 20px;
-  } 
-
-  .summary-container {
-    margin-top: $forty;
-
-    .summary-row {
-      border-top: none;
-      padding: {
-        top: 0px;
+    .nav-block {
+      .status {
+        font-size: $header;
       }
 
-      .summary-block {
-        margin-top: 0px;
+      .navs {
+        font-size: $smallP;
       }
     }
-  }
 
-  canvas {
-    height: 125px;
-    width: 125px;
+    .welcome-block {
+      .welcome {
+        font-size: $label;
+      }
+    }
   }
 }
+
+/* ------------------ */
+
+// .nav-container {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 70px;
+//   height: 100%;
+//   @include verticalColor;
+// }
+
+// .vertical-nav {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   display: block;
+//   width: 70px;
+//   height: 100%;
+//   text-align: center;
+
+//   .s {
+//     display: inline-block;
+//     color: $white;
+//     font-size: $title;
+//     font-weight: $thick;
+//     border: 2px solid $white;
+//     border-radius: 50%;
+//     padding: 3px 13px 3px 13px;
+//     margin: {
+//       top: $ten;
+//       bottom: -10px;
+//     }
+//   }
+
+//   .nav-icons {
+//     display: block;
+//     margin: {
+//       top: $fifty;
+//       bottom: $fifty;
+//     }
+//     @include auto;
+//   }
+// }
+
+// .header-container {
+//   margin-top: $ten;
+//   margin-left: 70px;
+//   padding-bottom: 1px;
+//   border-bottom: 1px solid $gray;
+
+//   .dash-block {
+//     display: inline-block;
+
+//     .dashboard {
+//       color: $darkGray;
+//       font-size: $label;
+//       font-weight: $thin;
+//     }
+//   }
+
+//   .log-block {
+//     display: inline-block;
+//     font-size: $smallP;
+//     text-align: right;
+//   }
+// }
+
+// .top-container {
+//   margin-left: 70px;
+
+//   .profile-block {
+//     margin-top: $fifteen;
+//     text-align: center;
+
+//     .doctor-profile {
+
+//       .doctor-name {
+//         color: $darkGray;
+//         display: inline;
+//         font-weight: $chubby;
+//       }
+
+//       .doctor-image {
+//         width: 40px;
+//         height: 40px;
+//         border-radius: 50%;
+//       }
+//     }
+
+//     .welcome {
+//       display: inline-block;
+//       font-weight: $thin;
+//       padding-top: 5px;
+
+//       .outlook {
+//         color: $red;
+//         font-weight: normal;
+//       }
+//     }
+//   }
+
+//   .time-block {
+//     text-align: center;
+
+//     #current-time,
+//     #meridies {
+//       display: inline-block;
+//     }
+
+//     #current-time {
+//       font-size: $clock;
+//       font-weight: $skinny;
+//     }
+
+//     #meridies {
+//       font-weight: $thin;
+//       margin-left: -2px;
+//     }
+
+//     #current-date {
+//       color: $darkGray;
+//       font-size: $paragraph;
+//       font-weight: $thin;
+//       letter-spacing: $one;
+//       margin-top: -20px;
+//     }
+//   }
+
+//   .timeline-block {
+
+//     .timeline-title {
+//       font-size: $label;
+//       font-weight: $thin;
+//       text-align: center;
+//     }
+//   }
+// }
+
+// .summary-container {
+//   margin-left: $fifty;
+
+//   .summary-row {
+//     border-top: 1px solid $gray;
+//     border-bottom: 1px solid $gray;
+//     padding: {
+//       top: $twenty;
+//       bottom: $twenty;
+//     }
+//   }
+
+//   .summary-block {
+//     text-align: center;
+//     margin-top: $thirty;
+
+//     .summary-label {
+//       color: $darkGray;
+//       font-size: $paragraph;
+//       font-weight: $thin;
+//       margin-top: $ten;
+//     }
+//   }
+
+//   .note-block {
+//     margin-top: $twenty;
+
+//     .notes {
+//       font-size: $paragraph;
+//       font-weight: $thin;
+//       text-align: center;
+//     }
+
+//     .list {
+//       color: $darkGray;
+//       padding-left: $forty;
+
+//       .bullets {
+//         margin-bottom: $ten;
+//       }
+//     }
+//   }
+// }
+
+// // ----- DEVICES 760px AND UP
+// @media (min-width: 640px) {
+//   .top-container {
+//     border-bottom: 1px solid $gray;
+//     padding-bottom: $ten;
+
+//     .profile-block {
+//       text-align: left !important;
+//       padding-top: 5px;
+//     }
+
+//     .time-block {
+//       padding-top: 0px;
+//     }
+//   }
+
+//   .timeline-block {
+//     position: fixed;
+//     right: 0;
+//     background-color: $lightGray;
+//     height: 100%;
+//     // margin-top: -10px;
+//     padding-top: 20px;
+//   } 
+
+//   .summary-container {
+//     margin-top: $forty;
+
+//     .summary-row {
+//       border-top: none;
+//       padding: {
+//         top: 0px;
+//       }
+
+//       .summary-block {
+//         margin-top: 0px;
+//       }
+//     }
+//   }
+
+//   canvas {
+//     height: 125px;
+//     width: 125px;
+//   }
+// }
 
 
 

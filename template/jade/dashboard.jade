@@ -7,55 +7,67 @@ block vars
   script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js")
 
 block body
-  div.nav-container
-  div.vertical-nav
-    nav.nav
-      h1.s S
-      a(href="#") 
-        img(src="public/images/icons/dashboard.png" alt="dashboard icon" class="nav-icons")
-      a(href="#") 
-        img(src="public/images/icons/patients.png" alt="Patients icon" class="nav-icons")
-      a(href="#") 
-        img(src="public/images/icons/mail.png" alt="Mail icon" class="nav-icons")
-  div.container.header-container
+  div.container.header-container 
     div.row
-      div.medium-5.small-4.columns.dash-block
-        h2.dashboard DASHBOARD
-      div.medium-6.small-7.columns.log-block
-        a(href="/logout" class="logout") LOGOUT
-  div.container.top-container
+      div.medium-12.columns.nav-block
+        h1.status +
+        a(href="#" class="navs") DASHBOARD
+        a(href="#" class="navs") PATIENTS
+        a(href="#" class="navs") MESSAGES
+        a(href="/logout" class="navs slogout") LOGOUT
     div.row
-      div.medium-4.columns.profile-block
-        div.doctor-profile 
-          img(src="public/images/profiles/dr-grey.jpg" alt="Dr Merideth Grey" class="doctor-image")
-          p.doctor-name Dr. Merideth Grey
-        p.welcome Welcome back, todays outlook looks #[span.outlook busy].
-      div.medium-3.columns.time-block
-        div.time
-          h3#current-time 
-          //- p#meridies
-        div.date
-          h3#current-date
-      div.medium-3.columns.timeline-block
-        div.timeline
-          h3.timeline-title TIMELINE
-  div.container.summary-container
-    div.row.summary-row
-      div.medium-3.columns.summary-block
-        canvas(id="meet-chart")
-        h4.summary-label MEETINGS
-      div.medium-3.columns.summary-block
-        canvas(id="apps-chart")
-        h4.summary-label APPS
-      div.medium-3.columns.end.summary-block
-        canvas(id="labs-chart")
-        h4.summary-label LABS
-    div.row
-      div.medium-8.columns.note-block
-        h5.notes NOTES
-        ul.list
-          li.bullets Ernie Johnson's condition is great and is ok to be discharged on your watch
-          li.bullets Grant Hill's condition is weakening and must be moved to emergency care
-          li.bullets Charles Barkley's condistion is ok and may need another prescription of vicodin, the pharmacy
+      div.medium-10.columns.welcome-block
+        p.welcome WELCOME BACK, DR #[span.doc MERIDETH GREY]
+  //---------
+  //- div.nav-container
+  //- div.vertical-nav
+  //-   nav.nav
+  //-     h1.s S
+  //-     a(href="#") 
+  //-       img(src="public/images/icons/dashboard.png" alt="dashboard icon" class="nav-icons")
+  //-     a(href="#") 
+  //-       img(src="public/images/icons/patients.png" alt="Patients icon" class="nav-icons")
+  //-     a(href="#") 
+  //-       img(src="public/images/icons/mail.png" alt="Mail icon" class="nav-icons")
+  //- div.container.header-container
+  //-   div.row
+  //-     div.medium-5.small-4.columns.dash-block
+  //-       h2.dashboard DASHBOARD
+  //-     div.medium-6.small-7.columns.log-block
+  //-       a(href="/logout" class="logout") LOGOUT
+  //- div.container.top-container
+  //-   div.row
+  //-     div.medium-4.columns.profile-block
+  //-       div.doctor-profile 
+  //-         img(src="public/images/profiles/dr-grey.jpg" alt="Dr Merideth Grey" class="doctor-image")
+  //-         p.doctor-name Dr. Merideth Grey
+  //-       p.welcome Welcome back, todays outlook looks #[span.outlook busy].
+  //-     div.medium-3.columns.time-block
+  //-       div.time
+  //-         h3#current-time 
+  //-         //- p#meridies
+  //-       div.date
+  //-         h3#current-date
+  //-     div.medium-3.columns.timeline-block
+  //-       div.timeline
+  //-         h3.timeline-title TIMELINE
+  //- div.container.summary-container
+  //-   div.row.summary-row
+  //-     div.medium-3.columns.summary-block
+  //-       canvas(id="meet-chart")
+  //-       h4.summary-label MEETINGS
+  //-     div.medium-3.columns.summary-block
+  //-       canvas(id="apps-chart")
+  //-       h4.summary-label APPS
+  //-     div.medium-3.columns.end.summary-block
+  //-       canvas(id="labs-chart")
+  //-       h4.summary-label LABS
+  //-   div.row
+  //-     div.medium-8.columns.note-block
+  //-       h5.notes NOTES
+  //-       ul.list
+  //-         li.bullets Ernie Johnson's condition is great and is ok to be discharged on your watch
+  //-         li.bullets Grant Hill's condition is weakening and must be moved to emergency care
+  //-         li.bullets Charles Barkley's condistion is ok and may need another prescription of vicodin, the pharmacy
   script(src="public/js/all.js")
   script(src="public/js/chart.js")

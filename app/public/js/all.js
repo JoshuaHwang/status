@@ -7,6 +7,9 @@ function discover() {
   }, 1000);
 }
 
+//-- NAV
+$('#nav').addClass('js').before
+
 //-- CLOCK
 var monthNames = [
   'January',
@@ -26,7 +29,7 @@ var monthNames = [
 var dayNames = [
   'Sunday',
   'Monday',
-  'Tueday',
+  'Tuesday',
   'Wednesday',
   'Thursday',
   'Friday',
@@ -61,12 +64,6 @@ function startTime() {
   var date  = today.getDate();
   var hour  = formatHour(today.getHours());
   var min   = formatMin(today.getMinutes());
-
-  // if(hour >= 12) {
-  //   meridies.innerHTML = 'AM';
-  // } else if(hour <= 12) {
-  //   meridies.innerHTML = 'PM';
-  // }
 
   currentDate.innerHTML = day + ', ' + month + ' ' + date; 
   currentTime.innerHTML = hour + ':' + min;

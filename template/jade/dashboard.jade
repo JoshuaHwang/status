@@ -9,15 +9,40 @@ block vars
 block body
   div.container.header-container 
     div.row
-      div.medium-12.columns.nav-block
-        h1.status +
-        a(href="#" class="navs") DASHBOARD
-        a(href="#" class="navs") PATIENTS
-        a(href="#" class="navs") MESSAGES
-        a(href="/logout" class="navs slogout") LOGOUT
+      div.medium-3.small-3.columns.logo-block
+        span.plus +
+        h1.home.hide-for-small-only Status
+      div.medium-9.small-9.columns.nav-block
+        nav#nav
+          a(href="#" class="navs") DASHBOARD
+          a(href="#" class="navs") PATIENTS
+          a(href="#" class="navs") MESSAGES
+          a(href="/logout" class="navs logout") SIGNOUT
     div.row
-      div.medium-10.columns.welcome-block
-        p.welcome WELCOME BACK, DR #[span.doc MERIDETH GREY]
+      div.medium-12.columns.welcome-block
+        div.time-block.hide-for-small-only
+          div.time
+            h3#current-time 
+          div.date
+            h3#current-date
+        div.greeting
+          p.welcome WELCOME BACK, DR #[span.doc MERIDETH GREY]
+          p.outlook The outlook for today looks #[span.busy busy].
+  hr
+  div.container.top-container
+    div.row
+      div.medium-8.columns
+        div.summary-flex
+          div.summary-block
+            canvas(id="meet-chart" class="donut")
+            h4.summary-label MEETINGS
+          div.summary-block
+            canvas(id="apps-chart" class="donut")
+            h4.summary-label APPS
+          div.summary-block
+            canvas(id="labs-chart" class="donut")
+            h4.summary-label LABS
+
   //---------
   //- div.nav-container
   //- div.vertical-nav

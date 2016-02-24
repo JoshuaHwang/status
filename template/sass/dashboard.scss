@@ -111,7 +111,7 @@
 .summary-flex {
   display: flex;
   justify-content: space-around;
-  padding-top: $twenty;
+  padding-top: $ten;
 
   .summary-block {
     display: inline-block;
@@ -140,7 +140,7 @@
   }
 
   .notes-block {
-    height: 200px;
+    height: 250px;
     overflow: hidden;
 
     .bullets {
@@ -159,39 +159,78 @@
 }
 
 .timeline-block {
-    text-align: center;
-    background-color: $lightGray;
-    border-right: 2px solid $gray;
-    padding: {
-      top: $ten;
-      bottom: $twenty;
-    }
+  background-color: $lightGray;
+  width: 80%;
+  // border: {
+  //   right: 2px solid $gray;
+  //   bottom: 2px solid $gray;
+  // }
+  padding: {
+    top: $ten;
+    bottom: $twenty;
+    left: $ten;
+    right: $ten;
+  }
+  overflow: hidden;
+  @include auto;
 
-    #timeline {
-      text-align: left;
+  #timeline {
+    height: 500px;
+    overflow: hidden;
 
-      .timeline-item {
-        width: 375px;
-        margin-bottom: $thirty;
-        @include auto;
+    .timeline-item {
+      margin-bottom: $thirty;
+      @include auto;
+
+      .circle-block {
+        display: inline-block;
+        height: 17px;
+        width: 17px;
+
+        .circle {
+          color: $red;
+          font-size: $header;
+        }
+      }
+
+      .items {
+        background-color: $white;
+        display: inline-block;
+        margin-left: 20px;
+        border-bottom: 2px solid $gray;
+        border-radius: 2%;
 
         .timeline-title {
+          color: $white;
           font-size: $notes;
           font-weight: $thick;
+          background-color: $red;
+          padding-left: $five;
         }
 
         .timeline-content {
           font-size: $smallP;
+          padding: {
+            left: $five;
+            right: $five;
+          }
         }
 
         .patient {
           font-size: $smallP;
           font-weight: $thick;
           margin-top: -10px;
+          padding-left: $five;
         }
       }
     }
   }
+}
+
+.timeline-block:hover {
+  overflow-y: scroll;
+}
+
 // ----- DEVICES 640px AND UP
 @media (min-width: 640px) {
   .header-container {
@@ -211,61 +250,6 @@
     }
   }
 }
-
-/* ------------------ */
-//   .timeline-block {
-
-//     .timeline-title {
-//       font-size: $label;
-//       font-weight: $thin;
-//       text-align: center;
-//     }
-//   }
-// }
-
-// .summary-container {
-//   margin-left: $fifty;
-
-//   .summary-row {
-//     border-top: 1px solid $gray;
-//     border-bottom: 1px solid $gray;
-//     padding: {
-//       top: $twenty;
-//       bottom: $twenty;
-//     }
-//   }
-
-//   .summary-block {
-//     text-align: center;
-//     margin-top: $thirty;
-
-//     .summary-label {
-//       color: $darkGray;
-//       font-size: $paragraph;
-//       font-weight: $thin;
-//       margin-top: $ten;
-//     }
-//   }
-
-//   .note-block {
-//     margin-top: $twenty;
-
-//     .notes {
-//       font-size: $paragraph;
-//       font-weight: $thin;
-//       text-align: center;
-//     }
-
-//     .list {
-//       color: $darkGray;
-//       padding-left: $forty;
-
-//       .bullets {
-//         margin-bottom: $ten;
-//       }
-//     }
-//   }
-// }
 
 
 

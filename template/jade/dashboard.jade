@@ -31,7 +31,7 @@ block body
   hr
   div.container.top-container
     div.row
-      div.medium-8.columns
+      div.medium-6.columns
         div.summary-flex
           div.summary-block
             canvas(id="meet-chart" class="donut")
@@ -42,37 +42,37 @@ block body
           div.summary-block
             canvas(id="labs-chart" class="donut")
             h4.summary-label LABS
+      div.medium-6.columns
+        div.timeline-block
+          h5.timeline TIMELINE
+          div#timeline
+            div.timeline-item
+              h5.timeline-title 10:35 AM
+              p.timeline-content Lorem ipsum dolor sir amet condsectetur adipsicing eli. Atque facilis quo mairoes magnam modi av libero 
+              p.patient Charles Barkley
+            div.timeline-item
+              h5.timeline-title 12:00 AM
+              p.timeline-content Lorem ipsum dolor sir amet condsectetur adipsicing eli. Atque facilis quo mairoes magnam modi av libero 
+              p.patient Kenny Smith
+            div.timeline-item
+              h5.timeline-title 12:45 PM
+              p.timeline-content Lorem ipsum dolor sir amet condsectetur adipsicing eli. Atque facilis quo mairoes magnam modi av libero 
+              p.patient Stephen Curry
+  div.container.notes-container
+    div.row
+      div.medium-6.columns.notes-columns
+        h6.notes NOTES
+          div.notes-block
+            ul.list
+              li.bullets Ernie Johnson's condition is great and is ok to be discharged on your watch
+              li.bullets Grant Hill's condition is weakening and must be moved to emergency care
+              li.bullets Charles Barkley's condistion is ok and may need another prescription of vicodin, the pharmacy
+              li.bullets Charles Barkley's condistion is ok and may need another prescription of vicodin, the pharmacy
+
+
+    
 
   //---------
-  //- div.nav-container
-  //- div.vertical-nav
-  //-   nav.nav
-  //-     h1.s S
-  //-     a(href="#") 
-  //-       img(src="public/images/icons/dashboard.png" alt="dashboard icon" class="nav-icons")
-  //-     a(href="#") 
-  //-       img(src="public/images/icons/patients.png" alt="Patients icon" class="nav-icons")
-  //-     a(href="#") 
-  //-       img(src="public/images/icons/mail.png" alt="Mail icon" class="nav-icons")
-  //- div.container.header-container
-  //-   div.row
-  //-     div.medium-5.small-4.columns.dash-block
-  //-       h2.dashboard DASHBOARD
-  //-     div.medium-6.small-7.columns.log-block
-  //-       a(href="/logout" class="logout") LOGOUT
-  //- div.container.top-container
-  //-   div.row
-  //-     div.medium-4.columns.profile-block
-  //-       div.doctor-profile 
-  //-         img(src="public/images/profiles/dr-grey.jpg" alt="Dr Merideth Grey" class="doctor-image")
-  //-         p.doctor-name Dr. Merideth Grey
-  //-       p.welcome Welcome back, todays outlook looks #[span.outlook busy].
-  //-     div.medium-3.columns.time-block
-  //-       div.time
-  //-         h3#current-time 
-  //-         //- p#meridies
-  //-       div.date
-  //-         h3#current-date
   //-     div.medium-3.columns.timeline-block
   //-       div.timeline
   //-         h3.timeline-title TIMELINE

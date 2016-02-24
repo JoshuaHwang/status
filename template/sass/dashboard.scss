@@ -117,17 +117,77 @@
       text-align: center;
 
       .donut {
-        width: 125px;
-        height: 125px;
+        width: 100px;
+        height: 100px;
       }
 
       .summary-label {
         color: $darkGray;
         font-size: $paragraph;
-        font-weight: $thin;
+        font-weight: $normal;
         margin-top: $ten;
       }
     }
+  }
+
+  .timeline-block {
+    text-align: center;
+    background-color: $lightGray;
+    border-right: 2px solid $gray;
+    padding: {
+      top: $ten;
+      bottom: $twenty;
+    }
+
+    #timeline {
+      text-align: left;
+
+      .timeline-item {
+        width: 375px;
+        margin-bottom: $twenty;
+        @include auto;
+
+        .timeline-title {
+          font-size: $notes;
+          font-weight: $thick;
+        }
+
+        .timeline-content {
+          font-size: $smallP;
+        }
+
+        .patient {
+          font-size: $smallP;
+          font-weight: $thick;
+        }
+      }
+    }
+  }
+}
+
+.notes-columns {
+  margin-top: $forty;
+
+  .notes {
+    font-size: $label;
+  }
+
+  .notes-block {
+    height: 200px;
+    overflow: hidden;
+
+    .bullets {
+      font-size: $notes;
+      border-bottom: 1px solid $lightGray;
+      padding: {
+        top: $five;
+        bottom: $five;
+      }
+    }
+  }
+
+  .notes-block:hover {
+    overflow-y: scroll;
   }
 }
 
@@ -152,133 +212,6 @@
 }
 
 /* ------------------ */
-
-// .nav-container {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 70px;
-//   height: 100%;
-//   @include verticalColor;
-// }
-
-// .vertical-nav {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   display: block;
-//   width: 70px;
-//   height: 100%;
-//   text-align: center;
-
-//   .s {
-//     display: inline-block;
-//     color: $white;
-//     font-size: $title;
-//     font-weight: $thick;
-//     border: 2px solid $white;
-//     border-radius: 50%;
-//     padding: 3px 13px 3px 13px;
-//     margin: {
-//       top: $ten;
-//       bottom: -10px;
-//     }
-//   }
-
-//   .nav-icons {
-//     display: block;
-//     margin: {
-//       top: $fifty;
-//       bottom: $fifty;
-//     }
-//     @include auto;
-//   }
-// }
-
-// .header-container {
-//   margin-top: $ten;
-//   margin-left: 70px;
-//   padding-bottom: 1px;
-//   border-bottom: 1px solid $gray;
-
-//   .dash-block {
-//     display: inline-block;
-
-//     .dashboard {
-//       color: $darkGray;
-//       font-size: $label;
-//       font-weight: $thin;
-//     }
-//   }
-
-//   .log-block {
-//     display: inline-block;
-//     font-size: $smallP;
-//     text-align: right;
-//   }
-// }
-
-// .top-container {
-//   margin-left: 70px;
-
-//   .profile-block {
-//     margin-top: $fifteen;
-//     text-align: center;
-
-//     .doctor-profile {
-
-//       .doctor-name {
-//         color: $darkGray;
-//         display: inline;
-//         font-weight: $chubby;
-//       }
-
-//       .doctor-image {
-//         width: 40px;
-//         height: 40px;
-//         border-radius: 50%;
-//       }
-//     }
-
-//     .welcome {
-//       display: inline-block;
-//       font-weight: $thin;
-//       padding-top: 5px;
-
-//       .outlook {
-//         color: $red;
-//         font-weight: normal;
-//       }
-//     }
-//   }
-
-//   .time-block {
-//     text-align: center;
-
-//     #current-time,
-//     #meridies {
-//       display: inline-block;
-//     }
-
-//     #current-time {
-//       font-size: $clock;
-//       font-weight: $skinny;
-//     }
-
-//     #meridies {
-//       font-weight: $thin;
-//       margin-left: -2px;
-//     }
-
-//     #current-date {
-//       color: $darkGray;
-//       font-size: $paragraph;
-//       font-weight: $thin;
-//       letter-spacing: $one;
-//       margin-top: -20px;
-//     }
-//   }
-
 //   .timeline-block {
 
 //     .timeline-title {
@@ -332,54 +265,6 @@
 //     }
 //   }
 // }
-
-// // ----- DEVICES 760px AND UP
-// @media (min-width: 640px) {
-//   .top-container {
-//     border-bottom: 1px solid $gray;
-//     padding-bottom: $ten;
-
-//     .profile-block {
-//       text-align: left !important;
-//       padding-top: 5px;
-//     }
-
-//     .time-block {
-//       padding-top: 0px;
-//     }
-//   }
-
-//   .timeline-block {
-//     position: fixed;
-//     right: 0;
-//     background-color: $lightGray;
-//     height: 100%;
-//     // margin-top: -10px;
-//     padding-top: 20px;
-//   } 
-
-//   .summary-container {
-//     margin-top: $forty;
-
-//     .summary-row {
-//       border-top: none;
-//       padding: {
-//         top: 0px;
-//       }
-
-//       .summary-block {
-//         margin-top: 0px;
-//       }
-//     }
-//   }
-
-//   canvas {
-//     height: 125px;
-//     width: 125px;
-//   }
-// }
-
-
 
 
 

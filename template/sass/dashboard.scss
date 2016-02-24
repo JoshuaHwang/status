@@ -106,66 +106,33 @@
 
 .top-container {
   margin-top: $twenty;
+}
 
-  .summary-flex {
-    display: flex;
-    justify-content: space-around;
-    padding-top: $twenty;
+.summary-flex {
+  display: flex;
+  justify-content: space-around;
+  padding-top: $twenty;
 
-    .summary-block {
-      display: inline-block;
-      text-align: center;
-
-      .donut {
-        width: 100px;
-        height: 100px;
-      }
-
-      .summary-label {
-        color: $darkGray;
-        font-size: $paragraph;
-        font-weight: $normal;
-        margin-top: $ten;
-      }
-    }
-  }
-
-  .timeline-block {
+  .summary-block {
+    display: inline-block;
     text-align: center;
-    background-color: $lightGray;
-    border-right: 2px solid $gray;
-    padding: {
-      top: $ten;
-      bottom: $twenty;
+
+    .donut {
+      width: 100px;
+      height: 100px;
     }
 
-    #timeline {
-      text-align: left;
-
-      .timeline-item {
-        width: 375px;
-        margin-bottom: $twenty;
-        @include auto;
-
-        .timeline-title {
-          font-size: $notes;
-          font-weight: $thick;
-        }
-
-        .timeline-content {
-          font-size: $smallP;
-        }
-
-        .patient {
-          font-size: $smallP;
-          font-weight: $thick;
-        }
-      }
+    .summary-label {
+      color: $darkGray;
+      font-size: $paragraph;
+      font-weight: $normal;
+      margin-top: $ten;
     }
   }
 }
 
 .notes-columns {
+  display: block;
   margin-top: $forty;
 
   .notes {
@@ -191,6 +158,40 @@
   }
 }
 
+.timeline-block {
+    text-align: center;
+    background-color: $lightGray;
+    border-right: 2px solid $gray;
+    padding: {
+      top: $ten;
+      bottom: $twenty;
+    }
+
+    #timeline {
+      text-align: left;
+
+      .timeline-item {
+        width: 375px;
+        margin-bottom: $thirty;
+        @include auto;
+
+        .timeline-title {
+          font-size: $notes;
+          font-weight: $thick;
+        }
+
+        .timeline-content {
+          font-size: $smallP;
+        }
+
+        .patient {
+          font-size: $smallP;
+          font-weight: $thick;
+          margin-top: -10px;
+        }
+      }
+    }
+  }
 // ----- DEVICES 640px AND UP
 @media (min-width: 640px) {
   .header-container {

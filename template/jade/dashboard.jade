@@ -42,9 +42,17 @@ block body
           div.summary-block
             canvas(id="labs-chart" class="donut")
             h4.summary-label LABS
+        div.notes-columns
+          h6.notes NOTES
+            div.notes-block
+              ul.list
+                li.bullets Ernie Johnson's condition is great and is ok to be discharged on your watch
+                li.bullets Grant Hill's condition is weakening and must be moved to emergency care
+                li.bullets Charles Barkley's condistion is ok and may need another prescription of vicodin, the pharmacy
+                li.bullets Charles Barkley's condistion is ok and may need another prescription of vicodin, the pharmacy
       div.medium-6.columns
         div.timeline-block
-          h5.timeline TIMELINE
+          //- h5.timeline TIMELINE
           div#timeline
             div.timeline-item
               h5.timeline-title 10:35 AM
@@ -58,41 +66,5 @@ block body
               h5.timeline-title 12:45 PM
               p.timeline-content Lorem ipsum dolor sir amet condsectetur adipsicing eli. Atque facilis quo mairoes magnam modi av libero 
               p.patient Stephen Curry
-  div.container.notes-container
-    div.row
-      div.medium-6.columns.notes-columns
-        h6.notes NOTES
-          div.notes-block
-            ul.list
-              li.bullets Ernie Johnson's condition is great and is ok to be discharged on your watch
-              li.bullets Grant Hill's condition is weakening and must be moved to emergency care
-              li.bullets Charles Barkley's condistion is ok and may need another prescription of vicodin, the pharmacy
-              li.bullets Charles Barkley's condistion is ok and may need another prescription of vicodin, the pharmacy
-
-
-    
-
-  //---------
-  //-     div.medium-3.columns.timeline-block
-  //-       div.timeline
-  //-         h3.timeline-title TIMELINE
-  //- div.container.summary-container
-  //-   div.row.summary-row
-  //-     div.medium-3.columns.summary-block
-  //-       canvas(id="meet-chart")
-  //-       h4.summary-label MEETINGS
-  //-     div.medium-3.columns.summary-block
-  //-       canvas(id="apps-chart")
-  //-       h4.summary-label APPS
-  //-     div.medium-3.columns.end.summary-block
-  //-       canvas(id="labs-chart")
-  //-       h4.summary-label LABS
-  //-   div.row
-  //-     div.medium-8.columns.note-block
-  //-       h5.notes NOTES
-  //-       ul.list
-  //-         li.bullets Ernie Johnson's condition is great and is ok to be discharged on your watch
-  //-         li.bullets Grant Hill's condition is weakening and must be moved to emergency care
-  //-         li.bullets Charles Barkley's condistion is ok and may need another prescription of vicodin, the pharmacy
   script(src="public/js/all.js")
   script(src="public/js/chart.js")

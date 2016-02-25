@@ -34,23 +34,43 @@ block body
   //-         p#current-date
   div.container
     div.row
-      div.medium-8.columns.patient-block
+      div.medium-9.columns.patient-block
         div.patient-header
           h2.patient PATIENTS
-          button(type="button" class="button") add patient
-        div.patient-lists
-          div.patient-item
-            h3.name Kobe Bryant
+          button(type="button" class="button") ADD PATIENT
+        table
+          thead
+            tr
+              td PATIENT ID
+              td NAME
+              td GENDER
+              td DOB
+          tbody
+            tr
+              td.patient-id 24081
+              td.name Kobe Byrant
+              td.gender M
+              td.dob 8/23/1978
+            tr
+              td.patient-id 55099
+              td.name Charles Barkley
+              td.gender M
+              td.dob 2/20/1963
+            tr
+              td.patient-id 98801
+              td.name Joshua Hwang
+              td.gender M
+              td.dob 8/4/1994
       div.medium-3.columns
         div.summary-flex
           div.summary-block
-            h4.summary-label MEETINGS
+            h3.summary-label MEETINGS
             canvas(id="meet-chart" class="donut")
           div.summary-block
-            h4.summary-label APPS
+            h3.summary-label APPS
             canvas(id="apps-chart" class="donut")
           div.summary-block
-            h4.summary-label LABS
+            h3.summary-label LABS
             canvas(id="labs-chart" class="donut")
   script(src="public/js/all.js")
   script(src="public/js/chart.js")

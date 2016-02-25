@@ -109,18 +109,41 @@
 }
 
 .patient-block {
+  background-color: $liteBlue;
   margin-top: $twenty;
 
   .patient {
     display: inline-block;
     color: $darkGray;
-    font-size: $title;
+    font-size: $subHeader;
     font-weight: $thin;
+    margin-top: $ten;
   }
 
   .button {
     float: right;
     border-radius: 4px;
+    margin-top: $ten;
+  }
+
+  .patient-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $twenty;
+  }
+
+  .patient-item {
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+
+    .patient-id,
+    .name,
+    .gender,
+    .dob {
+      display: inline-block;
+      font-size: $paragraph;
+    }
   }
 }
 
@@ -132,143 +155,15 @@
   }
 
   .summary-label {
-    font-size: $label;
+    font-size: $paragraph;
     font-weight: $thin;
   }
 
   .donut {
-    height: 125px;
-    width: 125px;
+    height: 100px;
+    width: 100px;
   }
 }
-// .top-container {
-//   margin-top: $twenty;
-// }
-
-// .summary-flex {
-//   display: flex;
-//   justify-content: space-around;
-
-//   .summary-block {
-//     display: inline-block;
-//     text-align: center;
-
-//     .donut {
-//       width: 100px;
-//       height: 100px;
-//     }
-
-//     .summary-label {
-//       color: $darkGray;
-//       font-size: $paragraph;
-//       font-weight: $normal;
-//       margin-top: $ten;
-//     }
-//   }
-// }
-
-// .notes-columns {
-//   display: block;
-//   margin-top: $forty;
-
-//   .notes {
-//     font-size: $label;
-//   }
-
-//   .notes-block {
-//     height: 250px;
-//     overflow: hidden;
-
-//     .bullets {
-//       font-size: $notes;
-//       border-bottom: 1px solid $lightGray;
-//       padding: {
-//         top: $five;
-//         bottom: $five;
-//       }
-//     }
-//   }
-
-//   .notes-block:hover {
-//     overflow-y: scroll;
-//   }
-// }
-
-// .timeline {
-//   text-align: center;
-//   font-weight: $thin;
-// }
-
-// .timeline-block {
-//   background-color: $lightGray;
-//   width: 80%;
-//   height: 500px;
-//   border-bottom: 2px solid $gray;
-//   margin-top: $ten;
-//   padding: {
-//     top: $ten;
-//     bottom: $twenty;
-//     left: $ten;
-//     right: $fifteen;
-//   }
-//   overflow: hidden;
-//   @include auto;
-
-//   #timeline {
-//     overflow: hidden;
-
-//     .timeline-item {
-//       margin-bottom: $thirty;
-//       @include auto;
-
-//       .circle-block {
-//         display: inline-block;
-//         height: 17px;
-//         width: 17px;
-
-//         .circle {
-//           color: $red;
-//           font-size: $header;
-//         }
-//       }
-
-//       .items {
-//         background-color: $white;
-//         display: inline-block;
-//         margin-left: 20px;
-//         border-bottom: 2px solid $gray;
-//         border-radius: 2%;
-
-//         .timeline-title {
-//           color: $white;
-//           font-size: $notes;
-//           font-weight: $thick;
-//           background-color: $red;
-//           padding-left: $five;
-//         }
-
-//         .timeline-content {
-//           font-size: $smallP;
-//           padding: {
-//             left: $five;
-//             right: $five;
-//           }
-//         }
-
-//         .patient {
-//           font-size: $smallP;
-//           font-weight: $thick;
-//           margin-top: -10px;
-//           padding-left: $five;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// .timeline-block:hover {
-//   overflow-y: scroll;
-// }
 
 // ----- DEVICES 640px AND UP
 @media (min-width: 640px) {

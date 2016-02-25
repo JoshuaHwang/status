@@ -13,6 +13,7 @@ app.use(express.static('public'));
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 require('./routes/routes.js')(app);
+require('./routes/patient-route.js')(app);
 
 var port = process.env.PORT || 1337;
 

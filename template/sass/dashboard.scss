@@ -8,26 +8,28 @@
   background: linear-gradient(to left, #019FE9, #30CCD6);
 }
 
+@mixin headerColor {
+  background: linear-gradient(to left, $navy, #42656E);
+}
+
 //-- DASHBOARD
 .header-container {
-  background-color: $navy;
-  height: 55px;
-  border-bottom: 2px solid $red;
+  background-color: #2F323E;
+  height: 45px;
 
   .logo-block {
     .home {
       display: inline-block;
       color: $white;
       font-size: $label;
-      font-weight: $chubby;
+      font-weight: $thick;
     }
 
     .plus {
       display: inline-block;
       color: $red;
       font-size: $subHeader;
-      font-weight: $chubby;
-      margin-left: $five;
+      font-weight: $fat;
     }
   }
 
@@ -40,206 +42,244 @@
       font-size: $tinyP;
       font-weight: $thick;
       letter-spacing: $one;
-      margin-left: $thirty;
-      border-bottom: 2px solid transparent;
+      margin-left: $twenty;
+      padding-bottom: $ten;
+      border-bottom: 1px solid transparent;
     }
 
     .navs:hover {
-      border-bottom: 2px solid $white;
+      border-bottom: 2px solid $red;
       transition: all 0.3s ease;
     }
   }
+}
 
-  .welcome-block {
-    .greeting {
-      display: inline-block;
-      margin-left: $twenty;
+.welcome-container {
+  background-color: #232731;
+  border-bottom: 2px solid $blue;
 
-      .welcome {
-        color: $black;
-        font-size: $label;
-        font-weight: $thin;
-        letter-spacing: $one;
-        margin-top: $twenty;
+  .profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: $ten;
+    margin-top: -30px;
+  }
 
-        .doc {
-          color: $blue;
-          font-weight: $chubby;
-        }
-      }
+  .greeting {
+    display: inline-block;
 
-      .outlook {
-        color: $darkGray;
-        font-size: $paragraph;
-
-        .busy {
-          color: $red;
-        }
-      }
+    .welcome,
+    .outlook {
+      color: $white;
     }
 
-    .time-block {
-      display: inline-block;
-      text-align: center;
+    .welcome {
       padding-top: $ten;
-  
-      #current-time {
-        font-size: $clock;
-        font-weight: $thin;
-      }
+    }
 
-      #meridies {
-        font-weight: $thin;
-        margin-left: -2px;
-      }
+    .outlook {
+      margin-top: -10px;
+    }
 
-      #current-date {
-        color: $darkGray;
-        font-size: $smallP;
-        font-weight: $normal;
-        letter-spacing: $one;
-        margin-top: -10px;
-      }
+    .doc {
+      color: $blue;
+    }
+
+    .busy {
+      color: $red;
     }
   }
-}
 
-.top-container {
-  margin-top: $twenty;
-}
-
-.summary-flex {
-  display: flex;
-  justify-content: space-around;
-  padding-top: $ten;
-
-  .summary-block {
-    display: inline-block;
+  .time-block {
+    color: $white;
     text-align: center;
 
-    .donut {
-      width: 100px;
-      height: 100px;
+    #current-time {
+      font-size: $header;
+      font-weight: $thin;
     }
 
-    .summary-label {
-      color: $darkGray;
-      font-size: $paragraph;
-      font-weight: $normal;
-      margin-top: $ten;
-    }
-  }
-}
-
-.notes-columns {
-  display: block;
-  margin-top: $forty;
-
-  .notes {
-    font-size: $label;
-  }
-
-  .notes-block {
-    height: 250px;
-    overflow: hidden;
-
-    .bullets {
+    #current-date {
       font-size: $notes;
-      border-bottom: 1px solid $lightGray;
-      padding: {
-        top: $five;
-        bottom: $five;
-      }
+      font-weight: $thin;
+      margin-top: -15px;
     }
-  }
-
-  .notes-block:hover {
-    overflow-y: scroll;
   }
 }
 
-.timeline-block {
-  background-color: $lightGray;
-  width: 80%;
-  // border: {
-  //   right: 2px solid $gray;
-  //   bottom: 2px solid $gray;
-  // }
-  padding: {
-    top: $ten;
+.patient-block {
+  margin-top: $twenty;
+
+  .patient {
+    display: inline-block;
+    color: $darkGray;
+    font-size: $title;
+    font-weight: $thin;
+  }
+
+  .button {
+    float: right;
+    border-radius: 4px;
+  }
+}
+
+.summary-block {
+  text-align: center;
+  margin: {
+    top: $twenty;
     bottom: $twenty;
-    left: $ten;
-    right: $ten;
   }
-  overflow: hidden;
-  @include auto;
 
-  #timeline {
-    height: 500px;
-    overflow: hidden;
+  .summary-label {
+    font-size: $label;
+    font-weight: $thin;
+  }
 
-    .timeline-item {
-      margin-bottom: $thirty;
-      @include auto;
-
-      .circle-block {
-        display: inline-block;
-        height: 17px;
-        width: 17px;
-
-        .circle {
-          color: $red;
-          font-size: $header;
-        }
-      }
-
-      .items {
-        background-color: $white;
-        display: inline-block;
-        margin-left: 20px;
-        border-bottom: 2px solid $gray;
-        border-radius: 2%;
-
-        .timeline-title {
-          color: $white;
-          font-size: $notes;
-          font-weight: $thick;
-          background-color: $red;
-          padding-left: $five;
-        }
-
-        .timeline-content {
-          font-size: $smallP;
-          padding: {
-            left: $five;
-            right: $five;
-          }
-        }
-
-        .patient {
-          font-size: $smallP;
-          font-weight: $thick;
-          margin-top: -10px;
-          padding-left: $five;
-        }
-      }
-    }
+  .donut {
+    height: 125px;
+    width: 125px;
   }
 }
+// .top-container {
+//   margin-top: $twenty;
+// }
 
-.timeline-block:hover {
-  overflow-y: scroll;
-}
+// .summary-flex {
+//   display: flex;
+//   justify-content: space-around;
+
+//   .summary-block {
+//     display: inline-block;
+//     text-align: center;
+
+//     .donut {
+//       width: 100px;
+//       height: 100px;
+//     }
+
+//     .summary-label {
+//       color: $darkGray;
+//       font-size: $paragraph;
+//       font-weight: $normal;
+//       margin-top: $ten;
+//     }
+//   }
+// }
+
+// .notes-columns {
+//   display: block;
+//   margin-top: $forty;
+
+//   .notes {
+//     font-size: $label;
+//   }
+
+//   .notes-block {
+//     height: 250px;
+//     overflow: hidden;
+
+//     .bullets {
+//       font-size: $notes;
+//       border-bottom: 1px solid $lightGray;
+//       padding: {
+//         top: $five;
+//         bottom: $five;
+//       }
+//     }
+//   }
+
+//   .notes-block:hover {
+//     overflow-y: scroll;
+//   }
+// }
+
+// .timeline {
+//   text-align: center;
+//   font-weight: $thin;
+// }
+
+// .timeline-block {
+//   background-color: $lightGray;
+//   width: 80%;
+//   height: 500px;
+//   border-bottom: 2px solid $gray;
+//   margin-top: $ten;
+//   padding: {
+//     top: $ten;
+//     bottom: $twenty;
+//     left: $ten;
+//     right: $fifteen;
+//   }
+//   overflow: hidden;
+//   @include auto;
+
+//   #timeline {
+//     overflow: hidden;
+
+//     .timeline-item {
+//       margin-bottom: $thirty;
+//       @include auto;
+
+//       .circle-block {
+//         display: inline-block;
+//         height: 17px;
+//         width: 17px;
+
+//         .circle {
+//           color: $red;
+//           font-size: $header;
+//         }
+//       }
+
+//       .items {
+//         background-color: $white;
+//         display: inline-block;
+//         margin-left: 20px;
+//         border-bottom: 2px solid $gray;
+//         border-radius: 2%;
+
+//         .timeline-title {
+//           color: $white;
+//           font-size: $notes;
+//           font-weight: $thick;
+//           background-color: $red;
+//           padding-left: $five;
+//         }
+
+//         .timeline-content {
+//           font-size: $smallP;
+//           padding: {
+//             left: $five;
+//             right: $five;
+//           }
+//         }
+
+//         .patient {
+//           font-size: $smallP;
+//           font-weight: $thick;
+//           margin-top: -10px;
+//           padding-left: $five;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .timeline-block:hover {
+//   overflow-y: scroll;
+// }
 
 // ----- DEVICES 640px AND UP
 @media (min-width: 640px) {
   .header-container {
-    height: 60px;
+    height: 50px;
 
     .nav-block {
       .navs {
         display: inline-block;
         font-size: $smallP;
+        margin-left: $forty;
       }
     }
 

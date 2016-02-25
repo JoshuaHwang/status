@@ -9,71 +9,48 @@ block vars
 block body
   div.container.header-container 
     div.row
-      div.medium-3.small-3.columns.logo-block
+      div.medium-3.small-1.columns.logo-block
         span.plus +
         h1.home.hide-for-small-only Status
-      div.medium-9.small-9.columns.nav-block
+      div.medium-9.small-11.columns.nav-block
         nav#nav
           a(href="#" class="navs") DASHBOARD
           a(href="#" class="navs") PATIENTS
           a(href="#" class="navs") MESSAGES
           a(href="/logout" class="navs logout") SIGNOUT
+  div.container.welcome-container
     div.row
-      div.medium-12.columns.welcome-block
-        div.time-block.hide-for-small-only
-          div.time
-            h3#current-time 
-          div.date
-            h3#current-date
+      div.medium-9.columns
+        img(src="public/images/profiles/dr-grey.jpg" class="profile-picture")
         div.greeting
           p.welcome WELCOME BACK, DR #[span.doc MERIDETH GREY]
           p.outlook The outlook for today looks #[span.busy busy].
-  hr
-  div.container.top-container
+  //- div.container.time-container
+  //-   div.row
+  //-     div.medium-8.columns
+  //-       div.time
+  //-         p#current-time
+  //-       div.date
+  //-         p#current-date
+  div.container
     div.row
-      div.medium-6.columns
+      div.medium-8.columns.patient-block
+        div.patient-header
+          h2.patient PATIENTS
+          button(type="button" class="button") add patient
+        div.patient-lists
+          div.patient-item
+            h3.name Kobe Bryant
+      div.medium-3.columns
         div.summary-flex
           div.summary-block
-            canvas(id="meet-chart" class="donut")
             h4.summary-label MEETINGS
+            canvas(id="meet-chart" class="donut")
           div.summary-block
-            canvas(id="apps-chart" class="donut")
             h4.summary-label APPS
+            canvas(id="apps-chart" class="donut")
           div.summary-block
-            canvas(id="labs-chart" class="donut")
             h4.summary-label LABS
-        div.notes-columns
-          h6.notes NOTES
-            div.notes-block
-              ul.list
-                li.bullets Ernie Johnson's condition is great and is ok to be discharged on your watch
-                li.bullets Grant Hill's condition is weakening and must be moved to emergency care
-                li.bullets Charles Barkley's condistion is ok and may need another prescription of vicodin, the pharmacy
-                li.bullets Charles Barkley's condistion is ok and may need another prescription of vicodin, the pharmacy
-      div.medium-6.columns
-        div.timeline-block
-          //- h5.timeline TIMELINE
-          div#timeline
-            div.timeline-item
-              div.circle-block
-                span.circle •
-              div.items
-                h5.timeline-title 10:35 AM
-                p.timeline-content Lorem ipsum dolor sir amet condsectetur adipsicing eli. Atque facilis quo mairoes magnam modi av libero 
-                p.patient Charles Barkley
-            div.timeline-item
-              div.circle-block
-                span.circle •
-              div.items
-                h5.timeline-title 12:00 AM
-                p.timeline-content Lorem ipsum dolor sir amet condsectetur adipsicing eli. Atque facilis quo mairoes magnam modi av libero Atque facilis quo mairoes magnam modi av libero 
-                p.patient Kenny Smith
-            div.timeline-item
-              div.circle-block
-                span.circle •
-              div.items
-                h5.timeline-title 12:45 PM
-                p.timeline-content Lorem ipsum dolor sir amet condsectetur adipsicing eli. Atque facilis quo mairoes magnam modi av libero 
-                p.patient Stephen Curry
+            canvas(id="labs-chart" class="donut")
   script(src="public/js/all.js")
   script(src="public/js/chart.js")

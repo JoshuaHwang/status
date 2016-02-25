@@ -1,3 +1,6 @@
+//-- FOUNDATION
+$(document).foundation();
+
 //-- SCROLL TO DEFAULT
 $('#caret').click(discover);
 
@@ -7,8 +10,15 @@ function discover() {
   }, 1000);
 }
 
-//-- NAV
-$('#nav').addClass('js').before
+//-- SHOW/HIDE PATIENT FORM
+var addPatient  = document.getElementById('add');
+var patientForm = document.getElementById('add-block');
+
+addPatient.addEventListener('click', showForm);
+
+function showForm() {
+  patientForm.setAttribute('class', 'show');
+}
 
 //-- CLOCK
 var monthNames = [
@@ -27,13 +37,13 @@ var monthNames = [
 ];
 
 var dayNames = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday'
+  'Sun',
+  'Mon',
+  'Tue',
+  'Wed',
+  'Thu',
+  'Fri',
+  'Sat'
 ];
 
 var currentDate = document.getElementById('current-date');

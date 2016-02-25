@@ -126,6 +126,14 @@
     margin-top: $ten;
   }
 
+  .hidden {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
   .patient-labels {
     display: flex;
     justify-content: space-between;

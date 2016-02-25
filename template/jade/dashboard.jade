@@ -37,8 +37,14 @@ block body
       div.medium-9.columns.patient-block
         div.patient-header
           h2.patient PATIENTS
-          a(href="/patients" class="button") ADD PATIENT
-        table
+          a(href="#" id="add" class="button") ADD PATIENT
+        div#add-block.hidden
+          form(class="form" action="/patients" method="POST")
+            input(type="text" name="patientId" placeholder="Patient ID")
+            input(type="text" name="firstName" placeholder="First Name")
+            input(type="text" name="lastName" placeholder="Last Name")
+            input(type="email" name="email" placeholder="Email")
+        table.table
           thead
             tr
               td PATIENT ID

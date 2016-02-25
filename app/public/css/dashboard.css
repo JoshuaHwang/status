@@ -4,116 +4,95 @@ html, body {
   margin: 0px;
   padding: 0px; }
 
-.nav-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 90px;
-  height: 100%;
-  background: #43cea2;
-  background: -webkit-linear-gradient(to bottom, #019FE9, #30CCD6);
-  background: linear-gradient(to bottom, #019FE9, #30CCD6); }
-
-.vertical-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 90px;
-  height: 100%;
-  text-align: center; }
-  .vertical-nav .s {
+.header-container {
+  background-color: #2F323E;
+  height: 45px; }
+  .header-container .logo-block .home {
     display: inline-block;
     color: #FDF9FD;
-    font-size: 25px;
-    font-weight: 500;
-    border: 2px solid #FDF9FD;
-    border-radius: 50%;
-    padding: 3px 13px 3px 13px;
-    margin-top: 10px;
-    margin-bottom: -10px; }
-  .vertical-nav .nav-icons {
-    display: block;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-right: auto;
-    margin-left: auto; }
-
-.header-container {
-  margin-top: 10px;
-  margin-left: 100px;
-  padding-bottom: 1px;
-  border-bottom: 1px solid #D6D0D2; }
-  .header-container .dash-block {
-    display: inline-block; }
-    .header-container .dash-block .dashboard {
-      color: #655D59;
-      font-size: 20px;
-      font-weight: 200; }
-  .header-container .log-block {
-    display: inline-block;
-    font-size: 14px;
-    text-align: right; }
-
-.top-container {
-  margin-left: 90px; }
-  .top-container .profile-block {
-    margin-top: 15px;
-    text-align: center; }
-    .top-container .profile-block .doctor-profile .doctor-name {
-      color: #655D59;
-      display: inline;
-      font-weight: 400; }
-    .top-container .profile-block .doctor-profile .doctor-image {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%; }
-    .top-container .profile-block .welcome {
-      display: inline-block;
-      font-weight: 200;
-      margin-top: 10px; }
-      .top-container .profile-block .welcome .outlook {
-        color: #F35D66;
-        font-weight: normal; }
-  .top-container .time-block {
-    text-align: center; }
-    .top-container .time-block #current-time,
-    .top-container .time-block #meridies {
-      display: inline-block; }
-    .top-container .time-block #current-time {
-      font-size: 50px;
-      font-weight: 100; }
-    .top-container .time-block #meridies {
-      font-weight: 200;
-      margin-left: -2px; }
-    .top-container .time-block #current-date {
-      color: #655D59;
-      font-size: 16px;
-      font-weight: 200;
-      letter-spacing: 1px;
-      margin-top: -20px; }
-  .top-container .timeline-block .timeline-title {
     font-size: 20px;
-    font-weight: 200;
-    text-align: center; }
+    font-weight: 500; }
+  .header-container .logo-block .plus {
+    display: inline-block;
+    color: #F35D66;
+    font-size: 30px;
+    font-weight: 700; }
+  .header-container .nav-block {
+    text-align: right;
+    padding-top: 20px; }
+    .header-container .nav-block .navs {
+      color: #FDF9FD;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-left: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid transparent; }
+    .header-container .nav-block .navs:hover {
+      border-bottom: 2px solid #F35D66;
+      transition: all 0.3s ease; }
 
-.summary-container {
-  margin-left: 90px; }
-  .summary-container .summary-block {
+.welcome-container {
+  background-color: #232731;
+  border-bottom: 2px solid #36B8D5; }
+  .welcome-container .profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: -30px; }
+  .welcome-container .greeting {
+    display: inline-block; }
+    .welcome-container .greeting .welcome,
+    .welcome-container .greeting .outlook {
+      color: #FDF9FD; }
+    .welcome-container .greeting .welcome {
+      padding-top: 10px; }
+    .welcome-container .greeting .outlook {
+      margin-top: -10px; }
+    .welcome-container .greeting .doc {
+      color: #36B8D5; }
+    .welcome-container .greeting .busy {
+      color: #F35D66; }
+  .welcome-container .time-block {
+    color: #FDF9FD;
     text-align: center; }
-    .summary-container .summary-block .summary-label {
-      font-size: 20px;
+    .welcome-container .time-block #current-time {
+      font-size: 36px;
       font-weight: 200; }
+    .welcome-container .time-block #current-date {
+      font-size: 14px;
+      font-weight: 200;
+      margin-top: -15px; }
+
+.patient-block {
+  margin-top: 20px; }
+  .patient-block .patient {
+    display: inline-block;
+    color: #655D59;
+    font-size: 25px;
+    font-weight: 200; }
+  .patient-block .button {
+    float: right;
+    border-radius: 4px; }
+
+.summary-block {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .summary-block .summary-label {
+    font-size: 20px;
+    font-weight: 200; }
+  .summary-block .donut {
+    height: 125px;
+    width: 125px; }
 
 @media (min-width: 640px) {
-  .profile-block {
-    text-align: left !important; }
-  .time-block {
-    padding-top: 0px; }
-  .timeline-block {
-    position: fixed;
-    right: 0;
-    background-color: #F4F4F4;
-    height: 100%;
-    margin-top: -10px;
-    padding-top: 10px; } }
+  .header-container {
+    height: 50px; }
+    .header-container .nav-block .navs {
+      display: inline-block;
+      font-size: 12px;
+      margin-left: 40px; }
+    .header-container .welcome-block .welcome {
+      font-size: 25px; } }

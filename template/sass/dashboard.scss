@@ -112,18 +112,19 @@
   background-color: $liteBlue;
   margin-top: $twenty;
 
+  .hidden {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
   .patient {
     display: inline-block;
     color: $darkGray;
     font-size: $subHeader;
     font-weight: $thin;
-    margin-top: $ten;
-  }
-
-  #exit {
-    display: inline-block;
-    float: right;
-    margin-right: $ten;
     margin-top: $ten;
   }
 
@@ -133,32 +134,8 @@
     margin-top: $ten;
   }
 
-  .hidden {
-    display: none;
-  }
-
-  .show {
-    display: block;
-  }
-
-  .patient-labels {
-    display: flex;
-    justify-content: space-between;
-    margin-top: $twenty;
-  }
-
-  .patient-item {
-    background-color: $white;
-    display: flex;
-    justify-content: space-between;
-
-    .patient-id,
-    .name,
-    .gender,
-    .dob {
-      display: inline-block;
-      font-size: $paragraph;
-    }
+  #exit {
+    margin-right: $ten;
   }
 }
 

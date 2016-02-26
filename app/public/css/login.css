@@ -42,7 +42,8 @@ body {
     .sign-container .form-sign .input[type=text],
     .sign-container .form-sign .input[type=email],
     .sign-container .form-sign .input[type=password] {
-      font-size: 12px; }
+      font-size: 12px;
+      letter-spacing: 1px; }
     .sign-container .form-sign .button {
       background-color: #F35D66;
       display: block;

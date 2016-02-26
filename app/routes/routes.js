@@ -1,7 +1,7 @@
 var express    = require('express');
 var path       = require('path');
 var bcrypt     = require('bcryptjs');
-var csrf       = require('csurf');
+// var csrf       = require('csurf');
 var bodyParser = require('body-parser');
 var mongoose   = require('mongoose');
 var sessions   = require('client-sessions');
@@ -24,7 +24,7 @@ module.exports = function(app) {
     ephemeral:      true // Delete cookie when browser closes
   }));
 
-  app.use(csrf());
+  // app.use(csrf());
 
   // Session 
   app.use(function(req, res, next) {
@@ -86,7 +86,7 @@ module.exports = function(app) {
 
   // Login
   app.get('/login', function(req, res) {
-    res.render('../template/jade/login.jade', { csrfToken: req.csrfToken() });
+    res.render('../template/jade/login.jade'); // , { csrfToken: req.csrfToken() }
   });
 
   app.post('/login', function(req, res) {

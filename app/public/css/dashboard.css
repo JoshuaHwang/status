@@ -66,26 +66,35 @@ html, body {
       margin-top: -15px; }
 
 .patient-block {
+  background-color: #ECF2F6;
   margin-top: 20px; }
+  .patient-block .hidden {
+    display: none; }
+  .patient-block .show {
+    display: block; }
   .patient-block .patient {
     display: inline-block;
     color: #655D59;
-    font-size: 25px;
-    font-weight: 200; }
+    font-size: 30px;
+    font-weight: 200;
+    margin-top: 10px; }
   .patient-block .button {
     float: right;
-    border-radius: 4px; }
+    border-radius: 4px;
+    margin-top: 10px; }
+  .patient-block #exit {
+    margin-right: 10px; }
 
 .summary-block {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px; }
   .summary-block .summary-label {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 200; }
   .summary-block .donut {
-    height: 125px;
-    width: 125px; }
+    height: 100px;
+    width: 100px; }
 
 @media (min-width: 640px) {
   .header-container {

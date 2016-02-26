@@ -26,7 +26,7 @@ module.exports = function(app) {
     patient.save(function(err) {
       if (err) {
         var err = 'Something bad happened, try again!';
-        res.render('../template/jade/dashbaord.jade', { error: error });
+        res.render('../template/jade/dashboard.jade', { error: error });
       } else {
         res.redirect('/dashboard');
       }

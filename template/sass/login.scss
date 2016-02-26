@@ -58,6 +58,7 @@ body {
     .input[type=email],
     .input[type=password] {
       font-size: $smallP;
+      letter-spacing: $one;
     }
 
     .button {

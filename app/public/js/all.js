@@ -13,11 +13,17 @@ function discover() {
 //-- SHOW/HIDE PATIENT FORM
 var addPatient  = document.getElementById('add');
 var patientForm = document.getElementById('add-block');
+var hideForm    = document.getElementById('exit');
 
 addPatient.addEventListener('click', showForm);
+hideForm.addEventListener('click', exitForm);
 
 function showForm() {
   patientForm.setAttribute('class', 'show');
+}
+
+function exitForm() {
+  patientForm.setAttribute('class', 'hidden');
 }
 
 //-- CLOCK

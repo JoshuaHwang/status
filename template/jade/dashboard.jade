@@ -38,12 +38,14 @@ block body
         div.patient-header
           h2.patient PATIENTS
           a(href="#" id="add" class="button") ADD PATIENT
+          a(href="#" id="exit") X
         div#add-block.hidden
           form(class="form" action="/patients" method="POST")
             input(type="text" name="patientId" placeholder="Patient ID")
             input(type="text" name="firstName" placeholder="First Name")
             input(type="text" name="lastName" placeholder="Last Name")
             input(type="email" name="email" placeholder="Email")
+            button(type="submit" class="button") Submit
         table.table
           thead
             tr

@@ -13,20 +13,20 @@ block body
             form(action="/register" method="POST")
               //- input(type="hidden" name="_csrf" value=csrfToken)
               div.input-block
-                img(src="public/images/icons/user.png" alt="User Icon" class="icon-img")
-                input(type="text" name="firstName" placeholder="First name" require=true class="input")
+                i.material-icons.icon-img account_circle
+                input(type="text" name="firstName" placeholder="FIRST NAME" require=true class="input")
               div.input-block
-                img(src="public/images/icons/user.png" alt="User Icon" class="icon-img")
-                input(type="text" name="lastName" placeholder="Last name" require=true class="input")
+                i.material-icons.icon-img account_circle
+                input(type="text" name="lastName" placeholder="LAST NAME" require=true class="input")
               div.input-block
-                img(src="public/images/icons/medId.png" alt="Medical ID Icon" class="icon-img")
-                input(type="text" name="medId" placeholder="Medical ID" require=true class="input")
+                i.material-icons.icon-img fingerprint
+                input(type="text" name="medId" placeholder="MEDICAL ID" require=true class="input")
               div.input-block
-                img(src="public/images/icons/user.png" alt="User Icon" class="icon-img")
-                input(type="email" name="email" placeholder="Email" require=true class="input")
+                i.material-icons.icon-img email
+                input(type="email" name="email" placeholder="EMAIL" require=true class="input")
               div.input-block
-                img(src="public/images/icons/password.png" alt="Password Icon" class="icon-img")
-                input(type="password" name="password" placeholder="Password" require=true class="input")
+                i.material-icons.icon-img lock
+                input(type="password" name="password" placeholder="PASSWORD" require=true class="input")
               button(type="submit" class="button") REGISTER
       div.medium-10.medium-offset-1
         div.account-block

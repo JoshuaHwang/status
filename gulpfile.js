@@ -2,6 +2,7 @@ var gulp    = require('gulp');
 var sass    = require('gulp-sass');
 var jade    = require('gulp-jade');
 var nodemon = require('gulp-nodemon');
+var concat  = require('gulp-concat');
 
 var app = 'app/app.js';
 
@@ -25,9 +26,20 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./app/public/css'))
   });
 
+gulp.task('angular', function() {
+  console.log('Concat angular files..');
+  gulp.src([
+    './app/public/js/angular/**/module.js',
+    './app/public/js/controllers/angular/**/*.js',
+    './app/public/js/services/angular/**/*.js'
+    ]).pipe(concat('default.js'))
+      .pipe(gulp.dest('./app/public/js/angular'));
+  });
+
 gulp.task('watch', function() {
   gulp.watch('./template/jade/**/*.jade', ['jade']);
   gulp.watch('./template/sass/**/*.scss', ['sass']);
+  gulp.watch('./app/public/js/')
   });
 
-gulp.task('default', ['jade', 'sass', 'watch', 'nodemon']);
+gulp.task('default', ['jade', 'sass', 'angular', 'watch', 'nodemon']);

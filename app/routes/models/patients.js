@@ -11,7 +11,8 @@ var Patient = mongoose.model('Patient', new Schema({
   patientId: { type: String, unique: true },
   profile:   String,
   drugs:     String,
-  labs:      String
+  labs:      String,
+  allergies: String
 }));
 
 module.exports = mongoose.model('Patient', Patient);

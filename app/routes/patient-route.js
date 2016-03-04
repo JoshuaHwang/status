@@ -3,7 +3,7 @@ var path       = require('path');
 var bodyParser = require('body-parser');
 var mongoose   = require('mongoose');
 var sessions   = require('client-sessions');
-var Patient    = require('./patients.js');
+var Patient    = require('./models/patients.js');
 
 module.exports = function(app) {
   app.set('view engine', 'jade');
@@ -21,6 +21,7 @@ module.exports = function(app) {
       profile:   req.body.profile,
       drugs:     req.body.drugs,
       labs:      req.body.labs,
+      allergies: req.body.allergies
     });
 
     patient.save(function(err) {

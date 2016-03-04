@@ -1,19 +1,22 @@
-var express    = require('express');
-var app        = express();
-var path       = require('path');
-var bcrypt     = require('bcryptjs');
+var express       = require('express');
+var app           = express();
+var path          = require('path');
+var bcrypt        = require('bcryptjs');
+var passport      = require('passport');
+var LocalStrategy = require('passport-local');
+var session       = require('express-session');
 // var csrf       = require('csurf');
-var bodyParser = require('body-parser');
-var mongoose   = require('mongoose');
-var sessions   = require('client-sessions');
+var bodyParser    = require('body-parser');
+var mongoose      = require('mongoose');
+var sessions      = require('client-sessions');
 
 mongoose.connect('mongodb://localhost/status');
 
 app.use(express.static('public'));
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-require('./routes/routes.js')(app);
-require('./routes/patient-route.js')(app);
+// require('./routes/routes.js')(app);
+// require('./routes/patient-route.js')(app);
 
 var port = process.env.PORT || 1337;
 

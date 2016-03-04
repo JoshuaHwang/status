@@ -15,6 +15,46 @@ var localStrategy = passportLocal.Strategy;
 
 app.set('view engine', 'jade');
 
+var strategy = new LocalStrategy(function(username, password, done) {
+  User.findOne({ username: username }, function(err, user) {
+      if(err) {
+        return done(err);
+      }
+      if(!user) {
+        return done(null, false, { message: 'Incorrect username.' });
+      }
+      if(user.password != password) {
+        return done(null, false, { message: 'Incorrect password.' });
+      }
+    return done(null, user);
+  });
+});
+
+passport.use(strategy);
+
+passport.serializeUser(function(user, done) {
+  console.log(user);
+  done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+  User.findById(id, function(err, user) {
+    console.log(user);
+    done(err, user);
+  });
+});
+
+router.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true
+}));
+
+var initializer = passport.initialize();
+
+app.use(initializer);
+app.use(passport.session());
+
 // module.exports = function(app) {
 //   app.set('view engine', 'jade');
 //   app.locals.pretty = true;

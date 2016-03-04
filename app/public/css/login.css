@@ -112,7 +112,8 @@ body {
   .form-register .input[type=text],
   .form-register .input[type=email],
   .form-register .input[type=password] {
-    font-size: 12px; }
+    font-size: 12px;
+    letter-spacing: 1px; }
   .form-register .button {
     background-color: #36B8D5;
     display: block;
